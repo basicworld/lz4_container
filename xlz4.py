@@ -5,7 +5,7 @@ Usage:
     xlz4.py -x <dir_name.lz4r>
 
 Arguments:
-    dir_name.lz4r compressed file_name
+    dir_name.lz4r file_name
     dir_name      dir_name
 
 Options:
@@ -69,48 +69,48 @@ class Lz4Container(object):
             raise IOError("No such file or directory: '%s'" % dir_name)
 
         # save
-        file_name = self.kwargs.get('file_name')
-        if file_name:
-            full_file_name = os.path.abspath(file_name)
-            full_file_dir = os.path.dirname(full_file_name)
-            os.makedirs(full_file_dir) if not os.path.isdir(full_file_dir) \
-                else None
-            # open file for compress
-            outfile = open(full_file_name, 'wb')
+        file_name = self.kwargs.get('file_name', os.path.basename(dir_name))
+        if not file_name.endswith('.lz4r'):
+            file_name = file_name + '.lz4r'
 
-            # get all files in dir_name and compress them using lz4
-            for parent, dirnames, infile_names in os.walk(dir_name):
-                for infile_name in infile_names:
-                    if WINPLAT:
-                        infile_name = infile_name.decode('gbk')
-                        parent = parent.decode('gbk')
-                    full_infile_name = os.path.join(parent, infile_name)
-                    # split file
-                    infile = open(full_infile_name, 'rb')
-                    blk_count = 0  # block count
-                    while True:
-                        blk = infile.read(64 * (2 ** 10))
-                        if not blk:  # end if down
-                            break
-                        if not WINPLAT:
-                            blk = lz4.compress(blk)
+        full_file_name = os.path.abspath(file_name)
+        full_file_dir = os.path.dirname(full_file_name)
+        os.makedirs(full_file_dir) if not os.path.isdir(full_file_dir) \
+            else None
+        # open file to save
+        outfile = open(full_file_name, 'wb')
 
-                        # header for blk info
-                        header = [parent,  # dir
-                                  os.path.basename(infile_name),
-                                  blk_count,  # is new file or not
-                                  len(blk)]  # bytes
-                        blk_count += 1
-                        b64str = base64.encodestring(json.dumps(header))
-                        outfile.write(hexlify(b64str))
-                        outfile.write('\n')
-                        outfile.write(blk)
-            outfile.flush()
-            outfile.close()
-            self.ok = True
+        # get all files in dir_name and compress them using lz4
+        for parent, dirnames, infile_names in os.walk(dir_name):
+            for infile_name in infile_names:
+                if WINPLAT:
+                    infile_name = infile_name.decode('gbk')
+                    parent = parent.decode('gbk')
+                full_infile_name = os.path.join(parent, infile_name)
+                # split file
+                infile = open(full_infile_name, 'rb')
+                blk_count = 0  # block count
+                while True:
+                    blk = infile.read(64 * (2 ** 10))
+                    if not blk:  # end if down
+                        break
+                    if not WINPLAT:
+                        blk = lz4.compress(blk)
 
-        else:
-            raise ValueError("file_name must be given")
+                    # header for blk info
+                    header = [parent,  # dir
+                              os.path.basename(infile_name),
+                              blk_count,  # is new file or not
+                              len(blk)]  # bytes
+                    blk_count += 1
+                    b64str = base64.encodestring(json.dumps(header))
+                    outfile.write(hexlify(b64str))
+                    outfile.write('\n')
+                    outfile.write(blk)
+                    del blk
+        outfile.flush()
+        outfile.close()
+        self.ok = True
 
     def decompress(self):
         """
@@ -124,29 +124,32 @@ class Lz4Container(object):
         file_name = self.kwargs.get('file_name')
         if not (file_name and os.path.isfile(file_name)):
             raise IOError("No such file or directory: '%s'" % file_name)
+        # dir_name = self.kwargs.get('dir_name')
 
         # decompress
-        lz4_f = open(file_name, 'rb')
+        infile = open(file_name, 'rb')
         while True:
-            header = lz4_f.readline()  # file header
+            header = infile.readline()  # file header
             if not header:
                 break
             # decode header
             header = json.loads(base64.decodestring(a2b_hex(header.strip())))
-            content = lz4_f.read(header[-1])
+            content = infile.read(header[-1])
 
-            file_dir = (header[0])
+            file_dir = header[0]
             # create dir
             os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
             # save file
             open_mode = 'wb' if (header[2] == 0) else 'ab'  # newfile or not
-            with open(os.path.join(file_dir, header[1]), open_mode) as item_f:
+            with open(os.path.join(file_dir, header[1]), open_mode) as outfile:
                 if WINPLAT:
-                    item_f.write(content)
+                    outfile.write(content)
                 else:
-                    item_f.write(lz4.decompress(content))
+                    outfile.write(lz4.decompress(content))
+                outfile.flush()
+                del content
 
-        lz4_f.close()
+        infile.close()
         self.ok = True
 
 
