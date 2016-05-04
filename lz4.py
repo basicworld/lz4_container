@@ -13,10 +13,21 @@ Options:
     -c            compress
     -x            decompress
 """
+# pep8
+# Here I defind a container for lz4,
+# use following cmd you can
+# compress and decompress files in dir_name to dir_name.lz4r
+
 # - lz4 -c dir_name.lz4r dir_name
 # - lz4 -x dir_name.lz4r
-# pep8
+
+# lz4r file is a pickle file, each pickle_item include:
+# file_name, file_dir, content(using lz4)
 import os
+import pickle
+import sys
+import lz4
+from Queue import Queue
 
 
 class Lz4Container(object):
@@ -29,7 +40,7 @@ class Lz4Container(object):
         """
         # raise error if open in wrong mode
         if ctype not in ('c', 'x'):
-            raise TypeError("ValueError: Invalid mode ('%s')" % ctype)
+            raise ValueError("Invalid mode ('%s')" % ctype)
 
         self.ctype = ctype
         self.kwargs = kwargs
@@ -48,6 +59,31 @@ class Lz4Container(object):
         dir_name = self.kwargs.get('dir_name')
         if not (dir_name and os.path.isdir(dir_name)):
             raise IOError("No such file or directory: '%s'" % dir_name)
+
+        # save
+        file_name = self.kwargs.get('file_name')
+        if file_name:
+            full_file_name = os.path.abspath(file_name)
+            full_file_dir = os.path.dirname(full_file_name)
+            os.makedirs(full_file_dir) if not os.path.isdir(full_file_dir) \
+                else None
+            # open file for compress
+            f = open(full_file_name, 'wb')
+
+            # get all files in dir_name and compress them using lz4
+            for parent, dirnames, filenames in os.walk(dir_name):
+                for filename in filenames:
+                    fullfilename = os.path.join(parent, filename)
+                    pickle.dump({
+                                'file_name': os.path.basename(filename),
+                                'file_dir': parent,
+                                'content': lz4.compress(open(fullfilename,
+                                                        'rb').read())
+                                }, f)
+            f.close()
+
+        else:
+            raise ValueError("file_name must be given")
         print('compressing')
 
     def decompress(self):
@@ -62,15 +98,20 @@ class Lz4Container(object):
         file_name = self.kwargs.get('file_name')
         if not (file_name and os.path.isfile(file_name)):
             raise IOError("No such file or directory: '%s'" % file_name)
-        print('decompressing')
-
-        file_name = os.path.abspath(file_name)
-
-        # mkdir for decompress
-        file_dir = os.path.dirname(file_name)
-        os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
 
         # decompress
+        lz4_f = open(file_name, 'rb')
+        while True:
+            try:
+                item = pickle.load(lz4_f)
+                file_dir = (item.get('file_dir'))
+                os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
+                with open(os.path.join(file_dir, item['file_name']),
+                          'wb') as item_f:
+                    item_f.write(lz4.decompress(item['content']))
+            except EOFError as e:  # when empty
+                break
+        lz4_f.close()
 
 
 def api(dir_name, file_name, ctype):
