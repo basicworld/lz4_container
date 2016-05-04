@@ -130,7 +130,7 @@ class Lz4Container(object):
                 if WINPLAT:
                     item_f.write(content)
                 else:
-                    item_f.write(lz4.decompress(item['content']))
+                    item_f.write(lz4.decompress(content))
 
         lz4_f.close()
 
