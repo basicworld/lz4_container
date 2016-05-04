@@ -31,6 +31,7 @@ python `lz4` library:
 
 	https://pypi.python.org/pypi/lz4/
 
+use hex to save header
 
 > don't try to install lz4 on windows (#2115).
 see here for more info: https://github.com/steeve/python-lz4/issues/27

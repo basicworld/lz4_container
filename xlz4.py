@@ -1,3 +1,4 @@
+# -*- coding:utf8 -*-
 """
 Usage:
     lz4.py -c <dir_name.lz4r> <dir_name>
@@ -20,13 +21,23 @@ Options:
 # - lz4 -c dir_name.lz4r dir_name
 # - lz4 -x dir_name.lz4r
 
-# lz4r file is a pickle file, each pickle_item include:
+# lz4r file is a json file, each json_item include:
 # file_name, file_dir, content(using lz4)
+
+# lz4 will not work if run on win platform
 import os
-import pickle
+import json
 import sys
-# import lz4
+reload(sys)
+sys.setdefaultencoding('utf8')
+import base64
 from Queue import Queue
+WINPLAT = ('win' in sys.platform)
+if not WINPLAT:
+    import lz4
+
+a2b_hex = base64.binascii.a2b_hex
+hexlify = base64.binascii.hexlify  # str to
 
 
 class Lz4Container(object):
@@ -47,8 +58,6 @@ class Lz4Container(object):
     def compress(self):
         """
         compress files in `dir_name` and save as `file_name`
-
-        todo: howto deal with subdir?
         """
         # raise error for wrong mode
         if self.ctype != 'c':
@@ -72,21 +81,23 @@ class Lz4Container(object):
             # get all files in dir_name and compress them using lz4
             for parent, dirnames, filenames in os.walk(dir_name):
                 for filename in filenames:
+                    if WINPLAT:
+                        filename = filename.decode('gbk')
+                        parent = parent.decode('gbk')
                     fullfilename = os.path.join(parent, filename)
-                    print len(open(fullfilename, 'rb').read())
-                    print len(lz4.compress(open(fullfilename, 'rb').read()))
-                    pickle.dump({
-                              'file_name': os.path.basename(filename),
-                              'file_dir': parent,
-                              # 'content': open(fullfilename, 'rb').read()
-                              'content': lz4.compress(open(fullfilename,
-                                                      'rb').read())
-                              }, f)
+                    blk = open(fullfilename, 'rb').read()
+                    if not WINPLAT:
+                        blk = lz4.compress(blk)
+                    header = [parent,
+                              os.path.basename(filename),
+                              len(blk)]  # byte
+                    f.write(hexlify(base64.encodestring(json.dumps(header))))
+                    f.write('\n')
+                    f.write(blk)
             f.close()
 
         else:
             raise ValueError("file_name must be given")
-        print('compressing')
 
     def decompress(self):
         """
@@ -104,16 +115,23 @@ class Lz4Container(object):
         # decompress
         lz4_f = open(file_name, 'rb')
         while True:
-            try:
-                item = pickle.load(lz4_f)
-                file_dir = (item.get('file_dir'))
-                os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
-                with open(os.path.join(file_dir, item['file_name']),
-                          'wb') as item_f:
-                    # item_f.write(item['content'])
-                    item_f.write(lz4.decompress(item['content']))
-            except EOFError as e:  # when empty
+            header = lz4_f.readline()  # file header
+            if not header:
                 break
+            # decode header
+            header = json.loads(base64.decodestring(a2b_hex(header.strip())))
+            content = lz4_f.read(header[-1])
+
+            file_dir = (header[0])
+            # create dir
+            os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
+            # save file
+            with open(os.path.join(file_dir, header[1]), 'wb') as item_f:
+                if WINPLAT:
+                    item_f.write(content)
+                else:
+                    item_f.write(lz4.decompress(item['content']))
+
         lz4_f.close()
 
 
@@ -126,7 +144,6 @@ def api(dir_name, file_name, ctype):
     @file_name    file_name for compress and decompress
     @ctype: `c` for compress, `x` for decompress
     """
-    # print (dir_name, file_name, ctype)
     if ctype == 'c':
         lz4app = Lz4Container(ctype, dir_name=dir_name, file_name=file_name)
         lz4app.compress()
@@ -143,7 +160,6 @@ def cmd():
     """
     from docopt import docopt
     args = docopt(__doc__)
-    print(args)
     ctype = 'c' if args.get('-c') else 'x'  # compress or decompress
     api(args.get('<dir_name>'), args.get('<dir_name.lz4r>'), ctype)
 
