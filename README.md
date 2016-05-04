@@ -2,19 +2,41 @@
 
 python container for lz4 (lz4 homepage: https://github.com/mwotton/lz4hs)
 
+### lz4
 
+lz4 is a fast fast compression
+
+here I write xlz4.py to create container for lz4
 
 ### Dependence
 
 - linux (can't run on win)
 - python2.7x
-- python library: lz4
+- python library: lz4, docopt
+
+### Usage
+	
+	Usage:
+	    xlz4.py -c <dir_name.lz4r> <dir_name>
+	    xlz4.py -x <dir_name.lz4r>
+	
+	Arguments:
+	    dir_name.lz4r compressed file_name
+	    dir_name      dir_name
+	
+	Options:
+	    -h --help     show this help
+	    -c            compress
+	    -x            decompress
+
+
 
 ### Note
 
 - coding in line with `pep8`
 - had not been tested on `mac` env, feel free to feed back any bug occurred on `mac`
-- please let me know it if you have any method to install `lz4` library on windows(x86)
+- don't try to install lz4 on windows (#2115).
+see here for more info: https://github.com/steeve/python-lz4/issues/27
 
 
 ### Development history
@@ -33,5 +55,6 @@ python `lz4` library:
 
 use hex to save header
 
-> don't try to install lz4 on windows (#2115).
-see here for more info: https://github.com/steeve/python-lz4/issues/27
+split file in case of memoryerror
+
+
