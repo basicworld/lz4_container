@@ -1,4 +1,3 @@
-# -*- coding:utf8 -*-
 """
 Usage:
     lz4.py -c <dir_name.lz4r> <dir_name>
@@ -26,7 +25,7 @@ Options:
 import os
 import pickle
 import sys
-import lz4
+# import lz4
 from Queue import Queue
 
 
@@ -74,12 +73,15 @@ class Lz4Container(object):
             for parent, dirnames, filenames in os.walk(dir_name):
                 for filename in filenames:
                     fullfilename = os.path.join(parent, filename)
+                    print len(open(fullfilename, 'rb').read())
+                    print len(lz4.compress(open(fullfilename, 'rb').read()))
                     pickle.dump({
-                                'file_name': os.path.basename(filename),
-                                'file_dir': parent,
-                                'content': lz4.compress(open(fullfilename,
-                                                        'rb').read())
-                                }, f)
+                              'file_name': os.path.basename(filename),
+                              'file_dir': parent,
+                              # 'content': open(fullfilename, 'rb').read()
+                              'content': lz4.compress(open(fullfilename,
+                                                      'rb').read())
+                              }, f)
             f.close()
 
         else:
@@ -108,6 +110,7 @@ class Lz4Container(object):
                 os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
                 with open(os.path.join(file_dir, item['file_name']),
                           'wb') as item_f:
+                    # item_f.write(item['content'])
                     item_f.write(lz4.decompress(item['content']))
             except EOFError as e:  # when empty
                 break
