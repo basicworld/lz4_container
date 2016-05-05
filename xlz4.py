@@ -230,8 +230,9 @@ class Lz4Container(object):
                         file_dir = os.path.join(drive, sub_dir)
                 # create dir
                 try:
-                    os.makedirs(file_dir) if not os.path.isdir(file_dir) else\
-                        None
+                    print(file_dir)
+                    if not os.path.isdir(file_dir):
+                        os.makedirs(file_dir)
                 except WindowsError as e:
                     raise WindowsError("Fail to makedirs: %s" % file_dir)
                 outfile_name = os.path.join(file_dir, header[1])
@@ -242,6 +243,7 @@ class Lz4Container(object):
                 if not outfile_name:
                     raise AssertionError('block missing')
             # save file
+            print(outfile_name)
             with open(outfile_name, open_mode) as outfile:
                 # header[-1]: size of content
                 content = infile.read(header[-1])
