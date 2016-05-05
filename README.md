@@ -8,6 +8,12 @@ lz4 is a fast compression， homepage http://cyan4973.github.io/lz4/
 here I write xlz4.py to create container for lz4
 
 
+function: 
+
+- compress dir to *.lz4r
+- compress file to *.lz4r
+- show filenames in *.lz4r
+- decompress *.lz4r 
 
 
 structure of each block in *.lz4r:
@@ -17,16 +23,16 @@ structure of each block in *.lz4r:
 		|-- filename<str>
 		|-- block count of filename<int>
 		|-- size of content<int>
-	|-- content using lz4.compress<lz4 str>
+	|-- compressed content <str using lz4.compress>
 
 
 
 
 ### Dependence
 
-- linux (can't run on win)
-- python2.7x
-- python library: lz4, docopt
+- linux (can't run on win, but you can print filenames on win using `-l`)
+- python2.7x (not test on python3.x)
+- python library: `lz4`, `docopt`
 
 ### Usage
 
@@ -56,24 +62,30 @@ cmd eg:
 
 
 	# eg for compress. 
+	# available on linux
 	python xlz4.py -c test.lz4r test/
 
 	# eg for decompress.
+	# available on linux
 	python xlz4.py -x test.lz4r
 
 	# eg for decompress.
+	# available on linux
 	python xlz4.py -x test.lz4r test2
 
 
 	# eg for list of *.lz4r.
+	# available on linux and win
 	python xlz4.py -l test.lz4r
 
 ### Note
 
+
 - coding in line with `pep8`
+- files in `test` are from nginx source code
 - had not been tested on `mac` env, feel free to feed back any bug occurred on `mac`
 - don't try to install lz4 on windows (#2115).
-see here for more info: https://github.com/steeve/python-lz4/issues/27
+click here for more info: https://github.com/steeve/python-lz4/issues/27
 
 
 ### Development history
@@ -103,3 +115,5 @@ now you can list filenames in *.lz4r:
 	xlz4.py -l <dir_name.lz4r>
 
 debug for Path Dependence
+
+multi types of file tested: dir, txt_like file, jpg, pdf, gif, mp3...
