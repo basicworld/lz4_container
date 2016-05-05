@@ -101,3 +101,5 @@ now you can change dir when decompress:
 now you can list filenames in *.lz4r:
 
 	xlz4.py -l <dir_name.lz4r>
+
+debug for Path Dependence

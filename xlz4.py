@@ -76,7 +76,8 @@ class Lz4Container(object):
             raise IOError("No such file or directory: '%s'" % dir_name)
 
         # file_name is the outfile, namely *.lz4r
-        file_name = self.kwargs.get('file_name', os.path.basename(dir_name))
+        base_dir_name = os.path.basename(dir_name.rstrip('/'))
+        file_name = self.kwargs.get('file_name', base_dir_name)
         if not file_name.endswith('.lz4r'):
             file_name = file_name + '.lz4r'
 
@@ -85,11 +86,15 @@ class Lz4Container(object):
         os.makedirs(full_file_dir) if not os.path.isdir(full_file_dir) \
             else None
 
+        # get dir_name index in case of long dir_name
+        base_dir_name_index = len(dir_name.rstrip('/').split('/')) - 1
         # open file to save
         outfile = open(full_file_name, 'wb')
         if self.type_of_dir_name == 'dir':
             # get all files in dir_name and compress them using lz4
             for parent, dirnames, infile_names in os.walk(dir_name):
+                #
+                header_dir = '/'.join(parent.split('/')[base_dir_name_index:])
                 for infile_name in infile_names:
                     if WINPLAT:
                         infile_name = infile_name.decode('gbk')
@@ -106,7 +111,7 @@ class Lz4Container(object):
                             blk = lz4.compress(blk)
 
                         # header for blk info
-                        header = [parent,  # dir
+                        header = [header_dir,  # dir
                                   os.path.basename(infile_name),
                                   blk_count,  # is new file or not
                                   len(blk)]  # bytes
