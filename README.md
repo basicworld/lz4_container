@@ -2,18 +2,25 @@
 
 python container for lz4
 
-	# eg for compress. 
-	python xlz4.py -c tmp.lz4r tmp
 
-	# eg for decompress.
-	python xlz4.py -x tmp.lz4r
-
-
-### lz4
-
-lz4 is a fast fast compression， homepage http://cyan4973.github.io/lz4/
+lz4 is a fast compression， homepage http://cyan4973.github.io/lz4/
 
 here I write xlz4.py to create container for lz4
+
+
+
+
+structure of each block in *.lz4r:
+
+	|-- header<list using hex and base64>
+		|-- dir<str>
+		|-- filename<str>
+		|-- block count of filename<int>
+		|-- size of content<int>
+	|-- content using lz4.compress<lz4 str>
+
+
+
 
 ### Dependence
 
@@ -22,21 +29,44 @@ here I write xlz4.py to create container for lz4
 - python library: lz4, docopt
 
 ### Usage
-	
+
+
+before use:
+
+	pip install -r dependence
+
+cmd:
+
 	Usage:
 	    xlz4.py -c <dir_name.lz4r> <dir_name>
 	    xlz4.py -x <dir_name.lz4r> [<dir_name>]
+	    xlz4.py -l <dir_name.lz4r>
 	
 	Arguments:
-	    dir_name.lz4r compressed file_name
+	    dir_name.lz4r file_name
 	    dir_name      dir_name
 	
 	Options:
 	    -h --help     show this help
 	    -c            compress
 	    -x            decompress
+	    -l            list the filename in lz4r
+
+cmd eg:
 
 
+	# eg for compress. 
+	python xlz4.py -c test.lz4r test/
+
+	# eg for decompress.
+	python xlz4.py -x test.lz4r
+
+	# eg for decompress.
+	python xlz4.py -x test.lz4r test2
+
+
+	# eg for list of *.lz4r.
+	python xlz4.py -l test.lz4r
 
 ### Note
 
