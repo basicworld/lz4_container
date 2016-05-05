@@ -1,4 +1,4 @@
-57794a68645852764c79497349434a6b5a575a70626d55694c4341774c4341784e4446640a
+57794a305a584e304c324631644738694c4341695a47566d6157356c496977674d4377674d54557a58513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -11,7 +11,7 @@ cat << END >> $NGX_AUTO_CONFIG_H
 #endif
 
 END
-57794a68645852764c79497349434a6c626d5270595735755a584e7a496977674d4377674f44517858513d3d0a
+57794a305a584e304c324631644738694c4341695a57356b61574675626d567a6379497349444173494467344e6c303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -57,7 +57,7 @@ else
     echo "$0: error: cannot detect system byte ordering"
     exit 1
 fi
-57794a68645852764c79497349434a6d5a57463064584a6c496977674d4377674d6a67774f46303d0a
+57794a305a584e304c324631644738694c4341695a6d5668644856795a53497349444173494449354d7a46640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -181,7 +181,7 @@ else
 fi
 
 rm -rf $NGX_AUTOTEST*
-57794a68645852764c79497349434a6f59585a6c496977674d4377674d544d3258513d3d0a
+57794a305a584e304c324631644738694c434169614746325a53497349444173494445304f46303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -194,7 +194,7 @@ cat << END >> $NGX_AUTO_CONFIG_H
 #endif
 
 END
-57794a68645852764c79497349434a6f59585a6c5832686c5957526c636e4d694c4341774c4341784d7a64640a
+57794a305a584e304c324631644738694c434169614746325a56396f5a57466b5a584a7a496977674d4377674d54513558513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -207,7 +207,7 @@ cat << END >> $NGX_AUTO_HEADERS_H
 #endif
 
 END
-57794a68645852764c79497349434a6f5a57466b5a584a7a496977674d4377674e44457858513d3d0a
+57794a305a584e304c324631644738694c434169614756685a4756796379497349444173494451794e46303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -221,7 +221,7 @@ ngx_include="sys/param.h";   . auto/include
 ngx_include="sys/mount.h";   . auto/include
 ngx_include="sys/statvfs.h"; . auto/include
 ngx_include="crypt.h";       . auto/include
-57794a68645852764c79497349434a70626d4e736457526c496977674d4377674d5441334f46303d0a
+57794a305a584e304c324631644738694c4341696157356a6248566b5a53497349444173494445784d7a6c640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -283,7 +283,7 @@ else
 fi
 
 rm -rf $NGX_AUTOTEST*
-57794a68645852764c79497349434a70626d6c30496977674d4377674e7a513158513d3d0a
+57794a305a584e304c324631644738694c434169615735706443497349444173494463354e6c303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -335,7 +335,7 @@ default:	build
 clean:
 	rm -rf Makefile $NGX_OBJS
 END
-57794a68645852764c79497349434a70626e4e3059577873496977674d4377674e4445794e56303d0a
+57794a305a584e304c324631644738694c4341696157357a6447467362434973494441734944517a4d446c640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -520,7 +520,7 @@ upgrade:
 
 	kill -QUIT \`cat $NGX_PID_PATH.oldbin\`
 END
-57794a68645852764c79497349434a745957746c496977674d4377674d5441354e544e640a
+57794a305a584e304c324631644738694c434169625746725a53497349444173494445784d7a637758513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -938,7 +938,7 @@ $ngx_pch
 END
 
 fi
-57794a68645852764c79497349434a74623252316247567a496977674d4377674d5451794f544a640a
+57794a305a584e304c324631644738694c4341696257396b6457786c6379497349444173494445304f444d7958513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -1479,7 +1479,7 @@ cat << END                                    >> $NGX_MODULES_C
 };
 
 END
-57794a68645852764c79497349434a7562326868646d55694c4341774c4341784d7a5a640a
+57794a305a584e304c324631644738694c434169626d396f59585a6c496977674d4377674d54513458513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -1492,7 +1492,7 @@ cat << END >> $NGX_AUTO_CONFIG_H
 #endif
 
 END
-57794a68645852764c79497349434a76634852706232357a496977674d4377674d6a41784e544a640a
+57794a305a584e304c324631644738694c43416962334230615739756379497349444173494449774e6a677758513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -2021,7 +2021,7 @@ case ".$NGX_PERL_MODULES" in
         NGX_PERL_MODULES=$NGX_PREFIX/$NGX_PERL_MODULES
     ;;
 esac
-57794a68645852764c79497349434a7a623356795932567a496977674d4377674d5463354e544e640a
+57794a305a584e304c324631644738694c43416963323931636d4e6c6379497349444173494445344e54413258513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -2575,7 +2575,7 @@ NGX_GOOGLE_PERFTOOLS_MODULE=ngx_google_perftools_module
 NGX_GOOGLE_PERFTOOLS_SRCS=src/misc/ngx_google_perftools_module.c
 
 NGX_CPP_TEST_SRCS=src/misc/ngx_cpp_test_module.cpp
-57794a68645852764c79497349434a7a644856696379497349444173494445794d46303d0a
+57794a305a584e304c324631644738694c43416963335231596e4d694c4341774c4341784d6a68640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -2584,7 +2584,7 @@ NGX_CPP_TEST_SRCS=src/misc/ngx_cpp_test_module.cpp
 have=NGX_SUPPRESS_WARN . auto/have
 
 have=NGX_SMP . auto/have
-57794a68645852764c79497349434a7a6457317459584a35496977674d4377674d6a51784e31303d0a
+57794a305a584e304c324631644738694c43416963335674625746796553497349444173494449314d544a640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -2680,7 +2680,7 @@ if [ $HTTP_SCGI = YES ]; then
 fi
 
 echo "$NGX_POST_CONF_MSG"
-57794a68645852764c79497349434a3061484a6c5957527a496977674d4377674d7a597a58513d3d0a
+57794a305a584e304c324631644738694c434169644768795a57466b637949734944417349444d344d31303d0a
 
 # Copyright (C) Nginx, Inc.
 
@@ -2701,7 +2701,7 @@ END
     CORE_SRCS="$CORE_SRCS $THREAD_POOL_SRCS"
     CORE_LIBS="$CORE_LIBS -lpthread"
 fi
-57794a68645852764c79497349434a31626d6c34496977674d4377674d6a49774e4446640a
+57794a305a584e304c324631644738694c434169645735706543497349444173494449794f446b7958513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -3553,7 +3553,7 @@ ngx_feature_test='struct addrinfo *res;
                   if (getaddrinfo("localhost", NULL, NULL, &res) != 0) return 1;
                   freeaddrinfo(res)'
 . auto/feature
-57794a68645852764c324e6a49697767496d466a5979497349444173494449794e46303d0a
+57794a305a584e304c3246316447396358474e6a49697767496d466a59794973494441734944497a4f56303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -3569,7 +3569,7 @@ CC_TEST_FLAGS="-Ae"
 PCRE_OPT="$PCRE_OPT -Ae"
 ZLIB_OPT="$ZLIB_OPT -Ae"
 MD5_OPT="$MD5_OPT -Ae"
-57794a68645852764c324e6a49697767496d4a6a5979497349444173494445794f544e640a
+57794a305a584e304c3246316447396358474e6a49697767496d4a6a59794973494441734944457a4e6a56640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -3642,7 +3642,7 @@ ngx_long_end='|'
 
 ngx_regex_dirsep='\\'
 ngx_dirsep="\\"
-57794a68645852764c324e6a49697767496d4e6a59794973494441734944457a4d6a52640a
+57794a305a584e304c3246316447396358474e6a49697767496d4e6a59794973494441734944457a4e7a42640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -3689,7 +3689,7 @@ CFLAGS="$CFLAGS -msg_disable unusedtop"
 CFLAGS="$CFLAGS -msg_disable unrefdecl"
 
 CFLAGS="$CFLAGS -msg_disable bitnotint"
-57794a68645852764c324e6a49697767496d4e735957356e496977674d4377674d546b784e31303d0a
+57794a305a584e304c3246316447396358474e6a49697767496d4e735957356e496977674d4377674d6a41794d56303d0a
 
 # Copyright (C) Nginx, Inc.
 
@@ -3794,7 +3794,7 @@ CFLAGS="$CFLAGS -g"
 if [ ".$CPP" = "." ]; then
     CPP="$CC -E"
 fi
-57794a68645852764c324e6a49697767496d4e76626d59694c4341774c4341304e444d3558513d3d0a
+57794a305a584e304c3246316447396358474e6a49697767496d4e76626d59694c4341774c4341304e6a553358513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4013,7 +4013,7 @@ if [ "$NGX_PLATFORM" != win32 ]; then
 #    fi
 
 fi
-57794a68645852764c324e6a49697767496d646a597949734944417349444d334d546c640a
+57794a305a584e304c3246316447396358474e6a49697767496d646a597949734944417349444d354d4456640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4200,7 +4200,7 @@ CFLAGS="$CFLAGS -g"
 if [ ".$CPP" = "." ]; then
     CPP="$CC -E"
 fi
-57794a68645852764c324e6a49697767496d6c6a5979497349444173494449354d7a56640a
+57794a305a584e304c3246316447396358474e6a49697767496d6c6a597949734944417349444d774e545a640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4322,7 +4322,7 @@ CFLAGS="$CFLAGS -Werror"
 
 # debug
 CFLAGS="$CFLAGS -g"
-57794a68645852764c324e6a49697767496d317a646d4d694c4341774c4341794e6a553358513d3d0a
+57794a305a584e304c3246316447396358474e6a49697767496d317a646d4d694c4341774c4341794e7a6b7a58513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4459,7 +4459,7 @@ ngx_long_cont='
 # MSVC understand / in path
 #ngx_regex_dirsep='\\'
 #ngx_dirsep="\\"
-57794a68645852764c324e6a49697767496d3568625755694c4341774c4341794d54597758513d3d0a
+57794a305a584e304c3246316447396358474e6a49697767496d3568625755694c4341774c4341794d6a513558513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4549,7 +4549,7 @@ else
     NGX_CC_NAME=unknown
 
 fi
-57794a68645852764c324e6a49697767496d39335979497349444173494445344f4442640a
+57794a305a584e304c3246316447396358474e6a49697767496d39335979497349444173494445354f4452640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4654,7 +4654,7 @@ ngx_cont=' &
 	'
 ngx_tab=' &
 		'
-57794a68645852764c324e6a49697767496e4e31626d4d694c4341774c43417a4d7a453458513d3d0a
+57794a305a584e304c3246316447396358474e6a49697767496e4e31626d4d694c4341774c43417a4e44633258513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -4813,2029 +4813,7 @@ CFLAGS="$CFLAGS -errwarn=%all"
 
 # debug
 CFLAGS="$CFLAGS -g"
-57794a68645852764c3278705969497349434a6a6232356d496977674d4377674d5451324e31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $USE_PCRE = YES -o $PCRE != NONE ]; then
-    . auto/lib/pcre/conf
-
-else
-    if [ $USE_PCRE = DISABLED -a $HTTP_REWRITE = YES ]; then
-
-cat << END
-
-$0: error: the HTTP rewrite module requires the PCRE library.
-You can either disable the module by using --without-http_rewrite_module
-option or you have to enable the PCRE support.
-
-END
-        exit 1
-    fi
-fi
-
-
-if [ $USE_OPENSSL = YES ]; then
-    . auto/lib/openssl/conf
-fi
-
-if [ $USE_MD5 = YES ]; then
-
-    if [ $USE_OPENSSL = YES ]; then
-        have=NGX_HAVE_OPENSSL_MD5_H . auto/have
-        have=NGX_OPENSSL_MD5 . auto/have
-        have=NGX_HAVE_MD5 . auto/have
-        MD5=YES
-        MD5_LIB=OpenSSL
-
-    else
-        . auto/lib/md5/conf
-    fi
-
-fi
-
-if [ $USE_SHA1 = YES ]; then
-
-    if [ $USE_OPENSSL = YES ]; then
-        have=NGX_HAVE_OPENSSL_SHA1_H . auto/have
-        have=NGX_HAVE_SHA1 . auto/have
-        SHA1=YES
-        SHA1_LIB=OpenSSL
-
-    else
-        . auto/lib/sha1/conf
-    fi
-
-fi
-
-if [ $USE_ZLIB = YES ]; then
-    . auto/lib/zlib/conf
-fi
-
-if [ $USE_LIBXSLT = YES ]; then
-    . auto/lib/libxslt/conf
-fi
-
-if [ $USE_LIBGD = YES ]; then
-    . auto/lib/libgd/conf
-fi
-
-if [ $USE_PERL = YES ]; then
-    . auto/lib/perl/conf
-fi
-
-if [ $HTTP_GEOIP = YES ]; then
-    . auto/lib/geoip/conf
-fi
-
-if [ $NGX_GOOGLE_PERFTOOLS = YES ]; then
-    . auto/lib/google-perftools/conf
-fi
-
-if [ $NGX_LIBATOMIC != NO ]; then
-    . auto/lib/libatomic/conf
-fi
-57794a68645852764c3278705969497349434a745957746c496977674d4377674e6a557958513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $PCRE != NONE -a $PCRE != NO -a $PCRE != YES ]; then
-    . auto/lib/pcre/make
-fi
-
-if [ $MD5 != NONE -a $MD5 != NO -a $MD5 != YES ]; then
-    . auto/lib/md5/make
-fi
-
-if [ $SHA1 != NONE -a $SHA1 != NO -a $SHA1 != YES ]; then
-    . auto/lib/sha1/make
-fi
-
-if [ $OPENSSL != NONE -a $OPENSSL != NO -a $OPENSSL != YES ]; then
-    . auto/lib/openssl/make
-fi
-
-if [ $ZLIB != NONE -a $ZLIB != NO -a $ZLIB != YES ]; then
-    . auto/lib/zlib/make
-fi
-
-if [ $NGX_LIBATOMIC != NO -a $NGX_LIBATOMIC != YES ]; then
-    . auto/lib/libatomic/make
-fi
-
-if [ $USE_PERL = YES ]; then
-    . auto/lib/perl/make
-fi
-57794a68645852764c3278705969497349434a305a584e30496977674d4377674e54553158513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-echo $ngx_n "checking for $ngx_lib ...$ngx_c"
-
-cat << END >> $NGX_AUTOCONF_ERR
-
-----------------------------------------
-checking for $ngx_lib
-
-END
-
-ngx_found=no
-
-cat << END > $NGX_AUTOTEST.c
-
-$ngx_lib_incs
-
-int main() {
-    $ngx_lib_test;
-    return 0;
-}
-
-
-eval "$CC $cc_test_flags $ngx_lib_cflags \
-     -o $NGX_AUTOTEST $NGX_AUTOTEST.c $ngx_libs \
-     >> $NGX_ERR 2>&1"
-
-if [ -x $NGX_AUTOTEST ]; then
-    echo " found"
-
-    ngx_found=yes
-
-else
-    echo " not found"
-fi
-
-rm -rf $NGX_AUTOTEST*
-57794a68645852764c327870596c78635a325676615841694c434169593239755a69497349444173494445354e6a46640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-    ngx_feature="GeoIP library"
-    ngx_feature_name=
-    ngx_feature_run=no
-    ngx_feature_incs="#include <GeoIP.h>"
-    ngx_feature_path=
-    ngx_feature_libs="-lGeoIP"
-    ngx_feature_test="GeoIP_open(NULL, 0)"
-    . auto/feature
-
-
-if [ $ngx_found = no ]; then
-
-    # FreeBSD port
-
-    ngx_feature="GeoIP library in /usr/local/"
-    ngx_feature_path="/usr/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lGeoIP"
-    else
-        ngx_feature_libs="-L/usr/local/lib -lGeoIP"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # NetBSD port
-
-    ngx_feature="GeoIP library in /usr/pkg/"
-    ngx_feature_path="/usr/pkg/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/pkg/lib -L/usr/pkg/lib -lGeoIP"
-    else
-        ngx_feature_libs="-L/usr/pkg/lib -lGeoIP"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # MacPorts
-
-    ngx_feature="GeoIP library in /opt/local/"
-    ngx_feature_path="/opt/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lGeoIP"
-    else
-        ngx_feature_libs="-L/opt/local/lib -lGeoIP"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = yes ]; then
-
-    CORE_INCS="$CORE_INCS $ngx_feature_path"
-    CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-
-    if [ $NGX_IPV6 = YES ]; then
-        ngx_feature="GeoIP IPv6 support"
-        ngx_feature_name="NGX_HAVE_GEOIP_V6"
-        ngx_feature_run=no
-        ngx_feature_incs="#include <stdio.h>
-                          #include <GeoIP.h>"
-        #ngx_feature_path=
-        #ngx_feature_libs=
-        ngx_feature_test="printf(\"%d\", GEOIP_CITY_EDITION_REV0_V6);"
-        . auto/feature
-    fi
-
-else
-
-cat << END
-
-$0: error: the GeoIP module requires the GeoIP library.
-You can either do not enable the module or install the library.
-
-END
-
-    exit 1
-fi
-57794a68645852764c327870596c78635a3239765a32786c4c58426c636d5a30623239736379497349434a6a6232356d496977674d4377674d54457a4e46303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-    ngx_feature="Google perftools"
-    ngx_feature_name=
-    ngx_feature_run=no
-    ngx_feature_incs=
-    ngx_feature_path=
-    ngx_feature_libs="-lprofiler"
-    ngx_feature_test="ProfilerStop()"
-    . auto/feature
-
-
-if [ $ngx_found = no ]; then
-
-    # FreeBSD port
-
-    ngx_feature="Google perftools in /usr/local/"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lprofiler"
-    else
-        ngx_feature_libs="-L/usr/local/lib -lprofiler"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # MacPorts
-
-    ngx_feature="Google perftools in /opt/local/"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lprofiler"
-    else
-        ngx_feature_libs="-L/opt/local/lib -lprofiler"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = yes ]; then
-    CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-
-else
-
-cat << END
-
-$0: error: the Google perftools module requires the Google perftools
-library. You can either do not enable the module or install the library.
-
-END
-
-    exit 1
-fi
-57794a68645852764c327870596c786362476c695958527662576c6a49697767496d4e76626d59694c4341774c4341784d446b7758513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $NGX_LIBATOMIC != YES ]; then
-
-    have=NGX_HAVE_LIBATOMIC . auto/have
-    CORE_INCS="$CORE_INCS $NGX_LIBATOMIC/src"
-    LINK_DEPS="$LINK_DEPS $NGX_LIBATOMIC/src/libatomic_ops.a"
-    CORE_LIBS="$CORE_LIBS $NGX_LIBATOMIC/src/libatomic_ops.a"
-
-else
-
-    ngx_feature="atomic_ops library"
-    ngx_feature_name=NGX_HAVE_LIBATOMIC
-    ngx_feature_run=yes
-    ngx_feature_incs="#define AO_REQUIRE_CAS
-                      #include <atomic_ops.h>"
-    ngx_feature_path=
-    ngx_feature_libs="-latomic_ops"
-    ngx_feature_test="long  n = 0;
-                      if (!AO_compare_and_swap(&n, 0, 1))
-                          return 1;
-                      if (AO_fetch_and_add(&n, 1) != 1)
-                          return 1;
-                      if (n != 2)
-                          return 1;
-                      AO_nop();"
-    . auto/feature
-
-    if [ $ngx_found = yes ]; then
-        CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-    else
-
-cat << END
-
-$0: error: libatomic_ops library was not found.
-
-END
-        exit 1
-    fi
-fi
-57794a68645852764c327870596c786362476c695958527662576c6a49697767496d3168613255694c4341774c43417a4e6a52640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-    cat << END                                            >> $NGX_MAKEFILE
-
-$NGX_LIBATOMIC/src/libatomic_ops.a:	$NGX_LIBATOMIC/Makefile
-	cd $NGX_LIBATOMIC && \$(MAKE)
-
-$NGX_LIBATOMIC/Makefile:	$NGX_MAKEFILE
-	cd $NGX_LIBATOMIC \\
-	&& if [ -f Makefile ]; then \$(MAKE) distclean; fi \\
-	&& ./configure
-
-END
-57794a68645852764c327870596c786362476c695a3251694c434169593239755a69497349444173494445314e7a56640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-    ngx_feature="GD library"
-    ngx_feature_name=
-    ngx_feature_run=no
-    ngx_feature_incs="#include <gd.h>"
-    ngx_feature_path=
-    ngx_feature_libs="-lgd"
-    ngx_feature_test="gdImagePtr img = gdImageCreateFromGifPtr(1, NULL);"
-    . auto/feature
-
-
-if [ $ngx_found = no ]; then
-
-    # FreeBSD port
-
-    ngx_feature="GD library in /usr/local/"
-    ngx_feature_path="/usr/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lgd"
-    else
-        ngx_feature_libs="-L/usr/local/lib -lgd"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # NetBSD port
-
-    ngx_feature="GD library in /usr/pkg/"
-    ngx_feature_path="/usr/pkg/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/pkg/lib -L/usr/pkg/lib -lgd"
-    else
-        ngx_feature_libs="-L/usr/pkg/lib -lgd"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # MacPorts
-
-    ngx_feature="GD library in /opt/local/"
-    ngx_feature_path="/opt/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lgd"
-    else
-        ngx_feature_libs="-L/opt/local/lib -lgd"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = yes ]; then
-
-    CORE_INCS="$CORE_INCS $ngx_feature_path"
-    CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-
-else
-
-cat << END
-
-$0: error: the HTTP image filter module requires the GD library.
-You can either do not enable the module or install the libraries.
-
-END
-
-    exit 1
-
-fi
-57794a68645852764c327870596c786362476c6965484e736443497349434a6a6232356d496977674d4377674d7a59784d31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-    ngx_feature="libxslt"
-    ngx_feature_name=
-    ngx_feature_run=no
-    ngx_feature_incs="#include <libxml/parser.h>
-                      #include <libxml/tree.h>
-                      #include <libxslt/xslt.h>
-                      #include <libxslt/xsltInternals.h>
-                      #include <libxslt/transform.h>
-                      #include <libxslt/xsltutils.h>"
-    ngx_feature_path="/usr/include/libxml2"
-    ngx_feature_libs="-lxml2 -lxslt"
-    ngx_feature_test="xmlParserCtxtPtr    ctxt = NULL;
-                      xsltStylesheetPtr   sheet = NULL;
-                      xmlDocPtr           doc;
-                      doc = xmlParseChunk(ctxt, NULL, 0, 0);
-                      xsltApplyStylesheet(sheet, doc, NULL);"
-    . auto/feature
-
-
-if [ $ngx_found = no ]; then
-
-    # FreeBSD port
-
-    ngx_feature="libxslt in /usr/local/"
-    ngx_feature_path="/usr/local/include/libxml2 /usr/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lxml2 -lxslt"
-    else
-        ngx_feature_libs="-L/usr/local/lib -lxml2 -lxslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # NetBSD port
-
-    ngx_feature="libxslt in /usr/pkg/"
-    ngx_feature_path="/usr/pkg/include/libxml2 /usr/pkg/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/pkg/lib -L/usr/pkg/lib -lxml2 -lxslt"
-    else
-        ngx_feature_libs="-L/usr/pkg/lib -lxml2 -lxslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # MacPorts
-
-    ngx_feature="libxslt in /opt/local/"
-    ngx_feature_path="/opt/local/include/libxml2 /opt/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lxml2 -lxslt"
-    else
-        ngx_feature_libs="-L/opt/local/lib -lxml2 -lxslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = yes ]; then
-
-    CORE_INCS="$CORE_INCS $ngx_feature_path"
-    CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-
-else
-
-cat << END
-
-$0: error: the HTTP XSLT module requires the libxml2/libxslt
-libraries. You can either do not enable the module or install the libraries.
-
-END
-
-    exit 1
-fi
-
-
-    ngx_feature="libexslt"
-    ngx_feature_name=NGX_HAVE_EXSLT
-    ngx_feature_run=no
-    ngx_feature_incs="#include <libexslt/exslt.h>"
-    ngx_feature_path="/usr/include/libxml2"
-    ngx_feature_libs="-lexslt"
-    ngx_feature_test="exsltRegisterAll();"
-    . auto/feature
-
-if [ $ngx_found = no ]; then
-
-    # FreeBSD port
-
-    ngx_feature="libexslt in /usr/local/"
-    ngx_feature_path="/usr/local/include/libxml2 /usr/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lexslt"
-    else
-        ngx_feature_libs="-L/usr/local/lib -lexslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # NetBSD port
-
-    ngx_feature="libexslt in /usr/pkg/"
-    ngx_feature_path="/usr/pkg/include/libxml2 /usr/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/usr/pkg/lib -L/usr/pkg/lib -lexslt"
-    else
-        ngx_feature_libs="-L/usr/pkg/lib -lexslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = no ]; then
-
-    # MacPorts
-
-    ngx_feature="libexslt in /opt/local/"
-    ngx_feature_path="/opt/local/include/libxml2 /opt/local/include"
-
-    if [ $NGX_RPATH = YES ]; then
-        ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lexslt"
-    else
-        ngx_feature_libs="-L/opt/local/lib -lexslt"
-    fi
-
-    . auto/feature
-fi
-
-
-if [ $ngx_found = yes ]; then
-    CORE_LIBS="$CORE_LIBS -lexslt"
-fi
-57794a68645852764c327870596c78636257513149697767496d4e76626d59694c4341774c4341794e54413558513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $MD5 != NONE ]; then
-
-    if grep MD5_Init $MD5/md5.h 2>&1 >/dev/null; then
-        # OpenSSL md5
-        OPENSSL_MD5=YES
-        have=NGX_HAVE_OPENSSL_MD5 . auto/have
-        have=NGX_OPENSSL_MD5 . auto/have
-    else
-        # rsaref md5
-        OPENSSL_MD5=NO
-    fi
-
-    have=NGX_HAVE_MD5 . auto/have
-    CORE_INCS="$CORE_INCS $MD5"
-
-    case "$NGX_CC_NAME" in
-
-        msvc* | owc* | bcc)
-            LINK_DEPS="$LINK_DEPS $MD5/md5.lib"
-            CORE_LIBS="$CORE_LIBS $MD5/md5.lib"
-        ;;
-
-        icc*)
-            LINK_DEPS="$LINK_DEPS $MD5/libmd5.a"
-
-            # to allow -ipo optimization we link with the *.o but not library
-            CORE_LIBS="$CORE_LIBS $MD5/md5_dgst.o"
-
-            if [ $MD5_ASM = YES ]; then
-                CORE_LIBS="$CORE_LIBS $MD5/asm/mx86-elf.o"
-            fi
-        ;;
-
-        *)
-            LINK_DEPS="$LINK_DEPS $MD5/libmd5.a"
-            CORE_LIBS="$CORE_LIBS $MD5/libmd5.a"
-            #CORE_LIBS="$CORE_LIBS -L $MD5 -lmd5"
-        ;;
-
-    esac
-
-else
-
-    if [ "$NGX_PLATFORM" != win32 ]; then
-
-            MD5=NO
-
-            # FreeBSD, Solaris 10
-
-            ngx_feature="md5 in system md library"
-            ngx_feature_name=NGX_HAVE_MD5
-            ngx_feature_run=no
-            ngx_feature_incs="#include <md5.h>"
-            ngx_feature_path=
-            ngx_feature_libs="-lmd"
-            ngx_feature_test="MD5_CTX md5; MD5Init(&md5)"
-            . auto/feature
-
-            ngx_md5_lib="system md"
-
-        if [ $ngx_found = no ]; then
-
-            # Solaris 8/9
-
-            ngx_feature="md5 in system md5 library"
-            ngx_feature_libs="-lmd5"
-            . auto/feature
-
-            ngx_md5_lib="system md5"
-        fi
-
-        if [ $ngx_found = no ]; then
-
-            # OpenSSL crypto library
-
-            ngx_feature="md5 in system OpenSSL crypto library"
-            ngx_feature_name="NGX_OPENSSL_MD5"
-            ngx_feature_incs="#include <openssl/md5.h>"
-            ngx_feature_libs="-lcrypto"
-            ngx_feature_test="MD5_CTX md5; MD5_Init(&md5)"
-            . auto/feature
-
-            ngx_md5_lib="system crypto"
-
-            if [ $ngx_found = yes ]; then
-                have=NGX_HAVE_OPENSSL_MD5_H . auto/have
-                have=NGX_HAVE_MD5 . auto/have
-            fi
-        fi
-
-        if [ $ngx_found = yes ]; then
-            CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-            MD5=YES
-            MD5_LIB=$ngx_md5_lib
-        fi
-    fi
-
-fi
-57794a68645852764c327870596c78636257513149697767496d3168613255694c4341774c4341784f44637958513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-case "$NGX_CC_NAME" in
-
-    msvc*)
-        ngx_makefile=makefile.msvc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\" LIBC=$LIBC MD5_ASM=$MD5_ASM"
-        ngx_md5="MD5=\"$MD5\""
-    ;;
-
-    owc*)
-        ngx_makefile=makefile.owc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\""
-        ngx_md5=`echo MD5=\"$MD5\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    bcc)
-        ngx_makefile=makefile.bcc
-        ngx_opt="-DCPU_OPT=\"$CPU_OPT\" -DMD5_ASM=$MD5_ASM"
-        ngx_md5=`echo \-DMD5=\"$MD5\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-esac
-
-
-done=NO
-
-
-case "$NGX_PLATFORM" in
-
-    win32)
-        cat << END                                        >> $NGX_MAKEFILE
-
-`echo "$MD5/md5.lib:	$NGX_MAKEFILE" | sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/md5/$ngx_makefile $ngx_opt $ngx_md5
-
-END
-
-        done=YES
-    ;;
-
-    SunOS:*:i86pc)
-        if [ $MD5_ASM = YES ]; then
-
-            cat << END                                        >> $NGX_MAKEFILE
-
-$MD5/libmd5.a:	$NGX_MAKEFILE
-	cd $MD5 \\
-	&& \$(MAKE) CFLAGS="$MD5_OPT -DSOL -DMD5_ASM -DL_ENDIAN" \\
-		CC="\$(CC)" CPP="\$(CPP)" \\
-		MD5_ASM_OBJ=asm/mx86-sol.o clean libmd5.a
-
-END
-
-            done=YES
-        fi
-    ;;
-
-    # FreeBSD: i386
-    # Linux: i686
-
-    *:i386 | *:i686)
-        if [ $MD5_ASM = YES ]; then
-
-            cat << END                                        >> $NGX_MAKEFILE
-
-$MD5/libmd5.a:	$NGX_MAKEFILE
-	cd $MD5 \\
-	&& \$(MAKE) CFLAGS="$MD5_OPT -DELF -DMD5_ASM -DL_ENDIAN" \\
-		CC="\$(CC)" CPP="\$(CPP)" \\
-		MD5_ASM_OBJ=asm/mx86-elf.o clean libmd5.a
-
-END
-
-            done=YES
-        fi
-    ;;
-
-esac
-
-
-if [ $done = NO ]; then
-
-    cat << END                                                >> $NGX_MAKEFILE
-
-$MD5/libmd5.a:	$NGX_MAKEFILE
-	cd $MD5 \\
-	&& \$(MAKE) CFLAGS="$MD5_OPT" \\
-		CC="\$(CC)" MD5_ASM_OBJ= clean libmd5.a
-
-END
-
-fi
-57794a68645852764c327870596c78636257513149697767496d31686132566d6157786c4c6d4a6a597949734944417349444d7a4d31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -q -O2 -tWM $(CPU_OPT) -DL_ENDIAN
-
-!if "$(MD5_ASM)" == "YES"
-
-md5.lib:
-	cd $(MD5)
-	bcc32 -c $(CFLAGS) -DMD5_ASM md5_dgst.c
-	tlib md5.lib +md5_dgst.obj +"asm\m-win32.obj"
-
-!else
-
-md5.lib:
-	cd $(MD5)
-	bcc32 -c $(CFLAGS) md5_dgst.c
-	tlib md5.lib +md5_dgst.obj
-
-!endif
-57794a68645852764c327870596c78636257513149697767496d31686132566d6157786c4c6d317a646d4d694c4341774c43417a4e6a56640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -nologo -O2 -Ob1 -Oi -Gs $(LIBC) $(CPU_OPT) -D L_ENDIAN
-
-!IF "$(MD5_ASM)" == "YES"
-
-md5.lib:
-	cd $(MD5)
-	cl -c $(CFLAGS) -D MD5_ASM md5_dgst.c
-	link -lib -out:md5.lib md5_dgst.obj asm/m-win32.obj
-
-!ELSE
-
-md5.lib:
-	cd $(MD5)
-	cl -c $(CFLAGS) md5_dgst.c
-	link -lib -out:md5.lib md5_dgst.obj
-
-!ENDIF
-57794a68645852764c327870596c78636257513149697767496d31686132566d6157786c4c6d39335979497349444173494449774e31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -zq -bt=nt -bm -ot -op -oi -oe -s $(CPU_OPT)
-
-md5.lib:
-	cd $(MD5)
-	wcl386 -c $(CFLAGS) -dL_ENDIAN md5_dgst.c
-	wlib -n md5.lib md5_dgst.obj
-57794a68645852764c327870596c78636233426c626e4e7a6243497349434a6a6232356d496977674d4377674d6a45314e6c303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $OPENSSL != NONE ]; then
-
-    case "$CC" in
-
-        cl | bcc32)
-            have=NGX_OPENSSL . auto/have
-            have=NGX_SSL . auto/have
-
-            CFLAGS="$CFLAGS -DNO_SYS_TYPES_H"
-
-            CORE_INCS="$CORE_INCS $OPENSSL/openssl/include"
-            CORE_DEPS="$CORE_DEPS $OPENSSL/openssl/include/openssl/ssl.h"
-            CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/ssleay32.lib"
-            CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/libeay32.lib"
-
-            # libeay32.lib requires gdi32.lib
-            CORE_LIBS="$CORE_LIBS gdi32.lib"
-            # OpenSSL 1.0.0 requires crypt32.lib
-            CORE_LIBS="$CORE_LIBS crypt32.lib"
-        ;;
-
-        *)
-            have=NGX_OPENSSL . auto/have
-            have=NGX_SSL . auto/have
-
-            CORE_INCS="$CORE_INCS $OPENSSL/.openssl/include"
-            CORE_DEPS="$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h"
-            CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a"
-            CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a"
-            CORE_LIBS="$CORE_LIBS $NGX_LIBDL"
-
-            if [ "$NGX_PLATFORM" = win32 ]; then
-                CORE_LIBS="$CORE_LIBS -lgdi32 -lcrypt32 -lws2_32"
-            fi
-        ;;
-    esac
-
-else
-
-    if [ "$NGX_PLATFORM" != win32 ]; then
-
-        OPENSSL=NO
-
-        ngx_feature="OpenSSL library"
-        ngx_feature_name="NGX_OPENSSL"
-        ngx_feature_run=no
-        ngx_feature_incs="#include <openssl/ssl.h>"
-        ngx_feature_path=
-        ngx_feature_libs="-lssl -lcrypto"
-        ngx_feature_test="SSL_library_init()"
-        . auto/feature
-
-        if [ $ngx_found = yes ]; then
-            have=NGX_SSL . auto/have
-            CORE_LIBS="$CORE_LIBS $ngx_feature_libs $NGX_LIBDL"
-            OPENSSL=YES
-        fi
-    fi
-
-    if [ $OPENSSL != YES ]; then
-
-cat << END
-
-$0: error: SSL modules require the OpenSSL library.
-You can either do not enable the modules, or install the OpenSSL library
-into the system, or build the OpenSSL library statically from the source
-with nginx by using --with-openssl=<path> option.
-
-END
-        exit 1
-    fi
-
-fi
-57794a68645852764c327870596c78636233426c626e4e7a6243497349434a745957746c496977674d4377674d5451334e31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-case "$CC" in
-
-    cl)
-
-        cat << END                                            >> $NGX_MAKEFILE
-
-$OPENSSL/openssl/include/openssl/ssl.h:	$NGX_MAKEFILE
-	\$(MAKE) -f auto/lib/openssl/makefile.msvc			\
-		OPENSSL="$OPENSSL" OPENSSL_OPT="$OPENSSL_OPT"
-
-END
-
-    ;;
-
-    bcc32)
-
-        ngx_opt=`echo "-DOPENSSL=\"$OPENSSL\" -DOPENSSL_OPT=\"$OPENSSL_OPT\"" \
-            | sed -e "s/\//$ngx_regex_dirsep/g"`
-
-        cat << END                                            >> $NGX_MAKEFILE
-
-`echo "$OPENSSL\\openssl\\lib\\libeay32.lib:				\
-	$OPENSSL\\openssl\\include\\openssl\\ssl.h"			\
-	| sed -e "s/\//$ngx_regex_dirsep/g"`
-
-`echo "$OPENSSL\\openssl\\lib\\ssleay32.lib:				\
-	$OPENSSL\\openssl\\include\\openssl\\ssl.h"			\
-	| sed -e "s/\//$ngx_regex_dirsep/g"`
-
-`echo "$OPENSSL\\openssl\\include\\openssl\\ssl.h:	$NGX_MAKEFILE"	\
-	| sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/openssl/makefile.bcc $ngx_opt
-
-END
-
-    ;;
-
-    *)
-        case $OPENSSL in
-            /*) ngx_prefix="$OPENSSL/.openssl" ;;
-            *)  ngx_prefix="$PWD/$OPENSSL/.openssl" ;;
-        esac
-
-        cat << END                                            >> $NGX_MAKEFILE
-
-$OPENSSL/.openssl/include/openssl/ssl.h:	$NGX_MAKEFILE
-	cd $OPENSSL \\
-	&& if [ -f Makefile ]; then \$(MAKE) clean; fi \\
-	&& ./config --prefix=$ngx_prefix no-shared $OPENSSL_OPT \\
-	&& \$(MAKE) \\
-	&& \$(MAKE) install LIBDIR=lib
-
-END
-
-    ;;
-
-esac
-57794a68645852764c327870596c78636233426c626e4e7a6243497349434a745957746c5a6d6c735a53356959324d694c4341774c43417a4e6a56640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-all:
-	cd $(OPENSSL)
-
-	perl Configure BC-32 no-shared --prefix=openssl $(OPENSSL_OPT)
-
-	ms\do_nasm
-
-	$(MAKE) -f ms\bcb.mak
-	$(MAKE) -f ms\bcb.mak install
-
-	# Borland's make does not expand "[ch]" in
-	#    copy "inc32\openssl\*.[ch]" "openssl\include\openssl"
-	copy inc32\openssl\*.h openssl\include\openssl
-57794a68645852764c327870596c78636233426c626e4e7a6243497349434a745957746c5a6d6c735a53357463335a6a496977674d4377674d6a457858513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-all:
-	cd $(OPENSSL)
-
-	perl Configure VC-WIN32 no-shared --prefix=openssl $(OPENSSL_OPT)
-
-	ms\do_ms
-
-	$(MAKE) -f ms\nt.mak
-	$(MAKE) -f ms\nt.mak install
-57794a68645852764c327870596c786363474e795a53497349434a6a6232356d496977674d4377674e546b344f46303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $PCRE != NONE ]; then
-    CORE_INCS="$CORE_INCS $PCRE"
-
-    case "$NGX_CC_NAME" in
-
-        msvc* | owc* | bcc)
-            have=NGX_PCRE . auto/have
-            have=PCRE_STATIC . auto/have
-            CORE_DEPS="$CORE_DEPS $PCRE/pcre.h"
-            LINK_DEPS="$LINK_DEPS $PCRE/pcre.lib"
-            CORE_LIBS="$CORE_LIBS $PCRE/pcre.lib"
-        ;;
-
-        icc* )
-            have=NGX_PCRE . auto/have
-            CORE_DEPS="$CORE_DEPS $PCRE/pcre.h"
-
-            LINK_DEPS="$LINK_DEPS $PCRE/.libs/libpcre.a"
-
-            echo $ngx_n "checking for PCRE library ...$ngx_c"
-
-            if [ -f $PCRE/pcre.h ]; then
-                ngx_pcre_ver=`grep PCRE_MAJOR $PCRE/pcre.h \
-                              | sed -e 's/^.*PCRE_MAJOR.* \(.*\)$/\1/'`
-
-            else if [ -f $PCRE/configure.in ]; then
-                ngx_pcre_ver=`grep PCRE_MAJOR= $PCRE/configure.in \
-                              | sed -e 's/^.*=\(.*\)$/\1/'`
-
-            else
-                ngx_pcre_ver=`grep pcre_major, $PCRE/configure.ac \
-                              | sed -e 's/^.*pcre_major,.*\[\(.*\)\].*$/\1/'`
-            fi
-            fi
-
-            echo " $ngx_pcre_ver major version found"
-
-            # to allow -ipo optimization we link with the *.o but not library
-
-            case "$ngx_pcre_ver" in
-                4|5)
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre.o"
-                ;;
-
-                6)
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_chartables.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_compile.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_exec.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_fullinfo.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_globals.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_tables.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_try_flipped.o"
-                ;;
-
-                *)
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_chartables.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_compile.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_exec.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_fullinfo.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_globals.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_tables.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_try_flipped.o"
-                    CORE_LIBS="$CORE_LIBS $PCRE/pcre_newline.o"
-                ;;
-
-            esac
-        ;;
-
-        *)
-            have=NGX_PCRE . auto/have
-
-            if [ "$NGX_PLATFORM" = win32 ]; then
-                have=PCRE_STATIC . auto/have
-            fi
-
-            CORE_DEPS="$CORE_DEPS $PCRE/pcre.h"
-            LINK_DEPS="$LINK_DEPS $PCRE/.libs/libpcre.a"
-            CORE_LIBS="$CORE_LIBS $PCRE/.libs/libpcre.a"
-        ;;
-
-    esac
-
-
-    if [ $PCRE_JIT = YES ]; then
-        have=NGX_HAVE_PCRE_JIT . auto/have
-        PCRE_CONF_OPT="$PCRE_CONF_OPT --enable-jit"
-    fi
-
-else
-
-    if [ "$NGX_PLATFORM" != win32 ]; then
-
-        PCRE=NO
-
-        ngx_feature="PCRE library"
-        ngx_feature_name="NGX_PCRE"
-        ngx_feature_run=no
-        ngx_feature_incs="#include <pcre.h>"
-        ngx_feature_path=
-        ngx_feature_libs="-lpcre"
-        ngx_feature_test="pcre *re;
-                          re = pcre_compile(NULL, 0, NULL, 0, NULL);
-                          if (re == NULL) return 1"
-        . auto/feature
-
-        if [ $ngx_found = no ]; then
-
-            # FreeBSD port
-
-            ngx_feature="PCRE library in /usr/local/"
-            ngx_feature_path="/usr/local/include"
-
-            if [ $NGX_RPATH = YES ]; then
-                ngx_feature_libs="-R/usr/local/lib -L/usr/local/lib -lpcre"
-            else
-                ngx_feature_libs="-L/usr/local/lib -lpcre"
-            fi
-
-            . auto/feature
-        fi
-
-        if [ $ngx_found = no ]; then
-
-            # RedHat RPM, Solaris package
-
-            ngx_feature="PCRE library in /usr/include/pcre/"
-            ngx_feature_path="/usr/include/pcre"
-            ngx_feature_libs="-lpcre"
-
-            . auto/feature
-        fi
-
-        if [ $ngx_found = no ]; then
-
-            # NetBSD port
-
-            ngx_feature="PCRE library in /usr/pkg/"
-            ngx_feature_path="/usr/pkg/include"
-
-            if [ $NGX_RPATH = YES ]; then
-                ngx_feature_libs="-R/usr/pkg/lib -L/usr/pkg/lib -lpcre"
-            else
-                ngx_feature_libs="-L/usr/pkg/lib -lpcre"
-            fi
-
-            . auto/feature
-        fi
-
-        if [ $ngx_found = no ]; then
-
-            # MacPorts
-
-            ngx_feature="PCRE library in /opt/local/"
-            ngx_feature_path="/opt/local/include"
-
-            if [ $NGX_RPATH = YES ]; then
-                ngx_feature_libs="-R/opt/local/lib -L/opt/local/lib -lpcre"
-            else
-                ngx_feature_libs="-L/opt/local/lib -lpcre"
-            fi
-
-            . auto/feature
-        fi
-
-        if [ $ngx_found = yes ]; then
-            CORE_INCS="$CORE_INCS $ngx_feature_path"
-            CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-            PCRE=YES
-        fi
-
-        if [ $PCRE = YES ]; then
-            ngx_feature="PCRE JIT support"
-            ngx_feature_name="NGX_HAVE_PCRE_JIT"
-            ngx_feature_test="int jit = 0;
-                              pcre_free_study(NULL);
-                              pcre_config(PCRE_CONFIG_JIT, &jit);
-                              if (jit != 1) return 1;"
-            . auto/feature
-
-            if [ $ngx_found = yes ]; then
-                PCRE_JIT=YES
-            fi
-        fi
-    fi
-
-    if [ $PCRE != YES ]; then
-cat << END
-
-$0: error: the HTTP rewrite module requires the PCRE library.
-You can either disable the module by using --without-http_rewrite_module
-option, or install the PCRE library into the system, or build the PCRE library
-statically from the source with nginx by using --with-pcre=<path> option.
-
-END
-        exit 1
-    fi
-
-fi
-57794a68645852764c327870596c786363474e795a53497349434a745957746c496977674d4377674d544d334d31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-case "$NGX_CC_NAME" in
-
-    msvc*)
-        ngx_makefile=makefile.msvc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\" LIBC=$LIBC"
-        ngx_pcre="PCRE=\"$PCRE\""
-    ;;
-
-    owc*)
-        ngx_makefile=makefile.owc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\""
-        ngx_pcre=`echo PCRE=\"$PCRE\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    bcc)
-        ngx_makefile=makefile.bcc
-        ngx_opt="-DCPU_OPT=\"$CPU_OPT\""
-        ngx_pcre=`echo \-DPCRE=\"$PCRE\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    *)
-        ngx_makefile=
-    ;;
-
-esac
-
-
-if [ -n "$ngx_makefile" ]; then
-
-    cat << END                                                >> $NGX_MAKEFILE
-
-`echo "$PCRE/pcre.lib:	$PCRE/pcre.h $NGX_MAKEFILE"			\
-	| sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/pcre/$ngx_makefile $ngx_pcre $ngx_opt
-
-`echo "$PCRE/pcre.h:" | sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/pcre/$ngx_makefile $ngx_pcre pcre.h
-
-END
-
-else
-
-    cat << END                                                >> $NGX_MAKEFILE
-
-$PCRE/pcre.h:	$PCRE/Makefile
-
-$PCRE/Makefile:	$NGX_MAKEFILE
-	cd $PCRE \\
-	&& if [ -f Makefile ]; then \$(MAKE) distclean; fi \\
-	&& CC="\$(CC)" CFLAGS="$PCRE_OPT" \\
-	./configure --disable-shared $PCRE_CONF_OPT
-
-$PCRE/.libs/libpcre.a:	$PCRE/Makefile
-	cd $PCRE \\
-	&& \$(MAKE) libpcre.la
-
-END
-
-fi
-57794a68645852764c327870596c786363474e795a53497349434a745957746c5a6d6c735a53356959324d694c4341774c4341314d7a42640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS =	-q -O2 -tWM -w-8004 $(CPU_OPT)
-PCREFLAGS =	-DHAVE_CONFIG_H -DPCRE_STATIC -DPOSIX_MALLOC_THRESHOLD=10 \
-		-DSUPPORT_PCRE8 -DHAVE_MEMMOVE
-
-
-pcre.lib:
-	cd $(PCRE)
-
-	bcc32 -c $(CFLAGS) -I. $(PCREFLAGS) pcre_*.c
-
-	copy /y nul pcre.lst
-	for %n in (*.obj) do @echo +%n ^^& >> pcre.lst
-	echo + >> pcre.lst
-
-	tlib pcre.lib @pcre.lst
-
-pcre.h:
-	cd $(PCRE)
-
-	copy /y pcre.h.generic pcre.h
-	copy /y config.h.generic config.h
-	copy /y pcre_chartables.c.dist pcre_chartables.c
-57794a68645852764c327870596c786363474e795a53497349434a745957746c5a6d6c735a53357463335a6a496977674d4377674e44633058513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS =	-O2 -Ob1 -Oi -Gs $(LIBC) $(CPU_OPT)
-PCREFLAGS =	-DHAVE_CONFIG_H -DPCRE_STATIC -DPOSIX_MALLOC_THRESHOLD=10 \
-		-DSUPPORT_PCRE8 -DHAVE_MEMMOVE
-
-
-pcre.lib:
-	cd $(PCRE)
-
-	cl -nologo -c $(CFLAGS) -I . $(PCREFLAGS) pcre_*.c
-
-	link -lib -out:pcre.lib -verbose:lib pcre_*.obj
-
-pcre.h:
-	cd $(PCRE)
-
-	copy /y pcre.h.generic pcre.h
-	copy /y config.h.generic config.h
-	copy /y pcre_chartables.c.dist pcre_chartables.c
-57794a68645852764c327870596c786363474e795a53497349434a745957746c5a6d6c735a53357664324d694c4341774c4341304f4452640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS =	-c -zq -bt=nt -ot -op -oi -oe -s -bm $(CPU_OPT)
-PCREFLAGS =	-DHAVE_CONFIG_H -DPCRE_STATIC -DPOSIX_MALLOC_THRESHOLD=10 &
-		-DSUPPORT_PCRE8 -DHAVE_MEMMOVE
-
-
-pcre.lib:
-	cd $(PCRE)
-
-	wcl386 $(CFLAGS) -i=. $(PCREFLAGS) pcre_*.c
-
-	dir /b *.obj > pcre.lst
-
-	wlib -n pcre.lib @pcre.lst
-
-pcre.h:
-	cd $(PCRE)
-
-	copy /y pcre.h.generic pcre.h
-	copy /y config.h.generic config.h
-	copy /y pcre_chartables.c.dist pcre_chartables.c
-57794a68645852764c327870596c7863634756796243497349434a6a6232356d496977674d4377674d6a4d354f46303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-echo "checking for perl"
-
-
-NGX_PERL_VER=`$NGX_PERL -v 2>&1 | grep '^This is perl' 2>&1 \
-                                | sed -e 's/^This is perl, \(.*\)/\1/'`
-
-if test -n "$NGX_PERL_VER"; then
-    echo " + perl version: $NGX_PERL_VER"
-
-    if [ "`$NGX_PERL -e 'use 5.006001; print "OK"'`" != "OK" ]; then
-        echo
-        echo "$0: error: perl 5.6.1 or higher is required"
-        echo
-
-        exit 1;
-    fi
-
-    if [ "`$NGX_PERL -MExtUtils::Embed -e 'print "OK"'`" != "OK" ]; then
-        echo
-        echo "$0: error: perl module ExtUtils::Embed is required"
-        echo
-
-        exit 1;
-    fi
-
-    NGX_PERL_CFLAGS="$CFLAGS `$NGX_PERL -MExtUtils::Embed -e ccopts`"
-    NGX_PM_CFLAGS=`$NGX_PERL -MExtUtils::Embed -e ccopts`
-
-    # gcc 4.1/4.2 warn about unused values in pTHX_
-    NGX_PERL_CFLAGS=`echo $NGX_PERL_CFLAGS \
-                     | sed -e 's/-Wunused-value/-Wno-unused-value/'`
-    # icc8 warns 'declaration hides parameter "my_perl"' in ENTER and LEAVE
-    NGX_PERL_CFLAGS=`echo $NGX_PERL_CFLAGS \
-                     | sed -e 's/-wd171/-wd171 -wd1599/'`
-
-    ngx_perl_ldopts=`$NGX_PERL -MExtUtils::Embed -e ldopts`
-
-    ngx_perl_dlext=`$NGX_PERL -MConfig -e 'print $Config{dlext}'`
-    ngx_perl_libdir="src/http/modules/perl/blib/arch/auto"
-    ngx_perl_module="$ngx_perl_libdir/nginx/nginx.$ngx_perl_dlext"
-
-    if $NGX_PERL -V:usemultiplicity | grep define > /dev/null; then
-        have=NGX_HAVE_PERL_MULTIPLICITY . auto/have
-        echo " + perl interpreter multiplicity found"
-    fi
-
-    if $NGX_PERL -V:useithreads | grep undef > /dev/null; then
-        # FreeBSD port wants to link with -pthread non-threaded perl
-        ngx_perl_ldopts=`echo $ngx_perl_ldopts | sed 's/ -pthread//'`
-    fi
-
-    if [ "$NGX_SYSTEM" = "Darwin" ]; then
-        # OS X system perl wants to link universal binaries
-        ngx_perl_ldopts=`echo $ngx_perl_ldopts \
-                         | sed -e 's/-arch x86_64 -arch i386//'`
-    fi
-
-    CORE_LINK="$CORE_LINK $ngx_perl_ldopts"
-    LINK_DEPS="$LINK_DEPS $NGX_OBJS/$ngx_perl_module"
-
-    if test -n "$NGX_PERL_MODULES"; then
-        have=NGX_PERL_MODULES value="(u_char *) \"$NGX_PERL_MODULES\""
-        . auto/define
-        NGX_PERL_MODULES_MAN=$NGX_PERL_MODULES/man3
-    fi
-
-else
-    echo
-    echo "$0: error: perl 5.6.1 or higher is required"
-    echo
-
-    exit 1;
-fi
-57794a68645852764c327870596c7863634756796243497349434a745957746c496977674d4377674d544d314e6c303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-v=`grep 'define NGINX_VERSION' src/core/nginx.h | sed -e 's/^.*"\(.*\)".*/\1/'`
-
-
-cat << END                                                    >> $NGX_MAKEFILE
-
-$NGX_OBJS/src/http/modules/perl/blib/arch/auto/nginx/nginx.$ngx_perl_dlext: \\
-		\$(CORE_DEPS) \$(HTTP_DEPS) \\
-		src/http/modules/perl/ngx_http_perl_module.h \\
-		$NGX_OBJS/src/http/modules/perl/Makefile
-	cd $NGX_OBJS/src/http/modules/perl && \$(MAKE)
-
-	rm -rf $NGX_OBJS/install_perl
-
-
-$NGX_OBJS/src/http/modules/perl/Makefile: \\
-		$NGX_AUTO_CONFIG_H \\
-		src/core/nginx.h \\
-		src/http/modules/perl/Makefile.PL \\
-		src/http/modules/perl/nginx.pm \\
-		src/http/modules/perl/nginx.xs \\
-		src/http/modules/perl/typemap
-	sed "s/%%VERSION%%/$v/" src/http/modules/perl/nginx.pm > \\
-		$NGX_OBJS/src/http/modules/perl/nginx.pm
-	cp -p src/http/modules/perl/nginx.xs $NGX_OBJS/src/http/modules/perl/
-	cp -p src/http/modules/perl/typemap $NGX_OBJS/src/http/modules/perl/
-	cp -p src/http/modules/perl/Makefile.PL $NGX_OBJS/src/http/modules/perl/
-
-	cd $NGX_OBJS/src/http/modules/perl \\
-		&& NGX_PM_CFLAGS="\$(NGX_PM_CFLAGS) -g $NGX_CC_OPT" \\
-			NGX_INCS="$CORE_INCS $NGX_OBJS $HTTP_INCS" \\
-			NGX_DEPS="\$(CORE_DEPS) \$(HTTP_DEPS)" \\
-		$NGX_PERL Makefile.PL \\
-			LIB=$NGX_PERL_MODULES \\
-			INSTALLSITEMAN3DIR=$NGX_PERL_MODULES_MAN
-
-END
-57794a68645852764c327870596c7863633268684d53497349434a6a6232356d496977674d4377674d5467314d56303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $SHA1 != NONE ]; then
-
-    have=NGX_HAVE_SHA1 . auto/have
-    CORE_INCS="$CORE_INCS $SHA1"
-
-    case "$NGX_CC_NAME" in
-
-        msvc* | owc* | bcc)
-            LINK_DEPS="$LINK_DEPS $SHA1/sha1.lib"
-            CORE_LIBS="$CORE_LIBS $SHA1/sha1.lib"
-        ;;
-
-        icc*)
-            LINK_DEPS="$LINK_DEPS $SHA1/libsha.a"
-
-            # to allow -ipo optimization we link with the *.o but not library
-            CORE_LIBS="$CORE_LIBS $SHA1/sha1_dgst.o"
-
-            if [ $SHA1_ASM = YES ]; then
-                CORE_LIBS="$CORE_LIBS $SHA1/asm/sx86-elf.o"
-            fi
-        ;;
-
-        *)
-            LINK_DEPS="$LINK_DEPS $SHA1/libsha.a"
-            CORE_LIBS="$CORE_LIBS $SHA1/libsha.a"
-            #CORE_LIBS="$CORE_LIBS -L $SHA1 -lsha"
-        ;;
-
-    esac
-
-else
-
-    if [ "$NGX_PLATFORM" != win32 ]; then
-
-        SHA1=NO
-
-        # FreeBSD
-
-        ngx_feature="sha1 in system md library"
-        ngx_feature_name=NGX_HAVE_SHA1
-        ngx_feature_run=no
-        ngx_feature_incs="#include <sha.h>"
-        ngx_feature_path=
-        ngx_feature_libs="-lmd"
-        ngx_feature_test="SHA_CTX sha1; SHA1_Init(&sha1)"
-        . auto/feature
-
-        ngx_sha1_lib="system md"
-
-        if [ $ngx_found = no ]; then
-
-            # OpenSSL crypto library
-
-            ngx_feature="sha1 in system OpenSSL crypto library"
-            ngx_feature_incs="#include <openssl/sha.h>"
-            ngx_feature_libs="-lcrypto"
-            . auto/feature
-
-            ngx_sha1_lib="system crypto"
-
-            if [ $ngx_found = yes ]; then
-                have=NGX_HAVE_OPENSSL_SHA1_H . auto/have
-            fi
-        fi
-
-        if [ $ngx_found = yes ]; then
-            CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-            SHA1=YES
-            SHA1_LIB=$ngx_sha1_lib
-        fi
-    fi
-
-fi
-57794a68645852764c327870596c7863633268684d53497349434a745957746c496977674d4377674d546b774d6c303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-case "$NGX_CC_NAME" in
-
-    msvc*)
-        ngx_makefile=makefile.msvc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\" LIBC=$LIBC SHA1_ASM=$SHA1_ASM"
-        ngx_sha1="SHA1=\"$SHA1\""
-    ;;
-
-    owc*)
-        ngx_makefile=makefile.owc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\""
-        ngx_sha1=`echo SHA1=\"$SHA1\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    bcc)
-        ngx_makefile=makefile.bcc
-        ngx_opt="-DCPU_OPT=\"$CPU_OPT\" -DSHA1_ASM=$SHA1_ASM"
-        ngx_sha1=`echo \-DSHA1=\"$SHA1\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-esac
-
-
-done=NO
-
-
-case "$NGX_PLATFORM" in
-
-    win32)
-        cat << END                                        >> $NGX_MAKEFILE
-
-`echo "$SHA1/sha1.lib:	$NGX_MAKEFILE" | sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/sha1/$ngx_makefile $ngx_opt $ngx_sha1
-
-END
-
-        done=YES
-    ;;
-
-    SunOS:*:i86pc)
-        if [ $SHA1_ASM = YES ]; then
-
-            cat << END                                        >> $NGX_MAKEFILE
-
-$SHA1/libsha.a:	$NGX_MAKEFILE
-	cd $SHA1 \\
-	&& \$(MAKE) CFLAGS="$SHA1_OPT -DSOL -DSHA1_ASM -DL_ENDIAN" \\
-		CC="\$(CC)" CPP="\$(CPP)" \\
-		SHA_ASM_OBJ=asm/sx86-sol.o clean libsha.a
-
-END
-
-            done=YES
-        fi
-    ;;
-
-    # FreeBSD: i386
-    # Linux: i686
-
-    *:i386 | *:i686)
-        if [ $SHA1_ASM = YES ]; then
-
-            cat << END                                        >> $NGX_MAKEFILE
-
-$SHA1/libsha.a:	$NGX_MAKEFILE
-	cd $SHA1 \\
-	&& \$(MAKE) CFLAGS="$SHA1_OPT -DELF -DSHA1_ASM -DL_ENDIAN" \\
-		CC="\$(CC)" CPP="\$(CPP)" \\
-		SHA_ASM_OBJ=asm/sx86-elf.o clean libsha.a
-
-END
-
-            done=YES
-        fi
-    ;;
-
-esac
-
-
-if [ $done = NO ]; then
-
-    cat << END                                                >> $NGX_MAKEFILE
-
-$SHA1/libsha.a:	$NGX_MAKEFILE
-	cd $SHA1 \\
-	&& \$(MAKE) CFLAGS="$SHA1_OPT" \\
-		CC="\$(CC)" SHA_ASM_OBJ= clean libsha.a
-
-END
-
-fi
-57794a68645852764c327870596c7863633268684d53497349434a745957746c5a6d6c735a53356959324d694c4341774c43417a4e4446640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -q -O2 -tWM $(CPU_OPT) -DL_ENDIAN
-
-!if "$(SHA1_ASM)" == "YES"
-
-sha1.lib:
-	cd $(SHA1)
-	bcc32 -c $(CFLAGS) -DSHA1_ASM sha1dgst.c
-	tlib sha1.lib +sha1dgst.obj +"asm\s-win32.obj"
-
-!else
-
-sha1.lib:
-	cd $(SHA1)
-	bcc32 -c $(CFLAGS) sha1dgst.c
-	tlib sha1.lib +sha1dgst.obj
-
-!endif
-57794a68645852764c327870596c7863633268684d53497349434a745957746c5a6d6c735a53357463335a6a496977674d4377674d7a637a58513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -nologo -O2 -Ob1 -Oi -Gs $(LIBC) $(CPU_OPT) -D L_ENDIAN
-
-!IF "$(SHA1_ASM)" == "YES"
-
-sha1.lib:
-	cd $(SHA1)
-	cl -c $(CFLAGS) -D SHA1_ASM sha1dgst.c
-	link -lib -out:sha1.lib sha1dgst.obj asm/s-win32.obj
-
-!ELSE
-
-sha1.lib:
-	cd $(SHA1)
-	cl -c $(CFLAGS) sha1dgst.c
-	link -lib -out:sha1.lib sha1dgst.obj
-
-!ENDIF
-57794a68645852764c327870596c7863633268684d53497349434a745957746c5a6d6c735a53357664324d694c4341774c4341794d5442640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -zq -bt=nt -bm -ot -op -oi -oe -s $(CPU_OPT)
-
-sha1.lib:
-	cd $(SHA1)
-	wcl386 -c $(CFLAGS) -dL_ENDIAN sha1dgst.c
-	wlib -n sha1.lib sha1dgst.obj
-57794a68645852764c327870596c7863656d78705969497349434a6a6232356d496977674d4377674d6a41304d31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-if [ $ZLIB != NONE ]; then
-    CORE_INCS="$CORE_INCS $ZLIB"
-
-    case "$NGX_CC_NAME" in
-
-        msvc* | owc* | bcc)
-            have=NGX_ZLIB . auto/have
-            LINK_DEPS="$LINK_DEPS $ZLIB/zlib.lib"
-            CORE_LIBS="$CORE_LIBS $ZLIB/zlib.lib"
-        ;;
-
-        icc*)
-            have=NGX_ZLIB . auto/have
-            LINK_DEPS="$LINK_DEPS $ZLIB/libz.a"
-
-            # to allow -ipo optimization we link with the *.o but not library
-            CORE_LIBS="$CORE_LIBS $ZLIB/adler32.o"
-            CORE_LIBS="$CORE_LIBS $ZLIB/crc32.o"
-            CORE_LIBS="$CORE_LIBS $ZLIB/deflate.o"
-            CORE_LIBS="$CORE_LIBS $ZLIB/trees.o"
-            CORE_LIBS="$CORE_LIBS $ZLIB/zutil.o"
-            CORE_LIBS="$CORE_LIBS $ZLIB/compress.o"
-
-            if [ $ZLIB_ASM != NO ]; then
-                CORE_LIBS="$CORE_LIBS $ZLIB/match.o"
-            fi
-        ;;
-
-        *)
-            have=NGX_ZLIB . auto/have
-            LINK_DEPS="$LINK_DEPS $ZLIB/libz.a"
-            CORE_LIBS="$CORE_LIBS $ZLIB/libz.a"
-            #CORE_LIBS="$CORE_LIBS -L $ZLIB -lz"
-        ;;
-
-    esac
-
-else
-
-    if [ "$NGX_PLATFORM" != win32 ]; then
-        ZLIB=NO
-
-        # FreeBSD, Solaris, Linux
-
-        ngx_feature="zlib library"
-        ngx_feature_name="NGX_ZLIB"
-        ngx_feature_run=no
-        ngx_feature_incs="#include <zlib.h>"
-        ngx_feature_path=
-        ngx_feature_libs="-lz"
-        ngx_feature_test="z_stream z; deflate(&z, Z_NO_FLUSH)"
-        . auto/feature
-
-
-        if [ $ngx_found = yes ]; then
-            CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
-            ZLIB=YES
-            ngx_found=no
-        fi
-    fi
-
-    if [ $ZLIB != YES ]; then
-cat << END
-
-$0: error: the HTTP gzip module requires the zlib library.
-You can either disable the module by using --without-http_gzip_module
-option, or install the zlib library into the system, or build the zlib library
-statically from the source with nginx by using --with-zlib=<path> option.
-
-END
-        exit 1
-    fi
-
-fi
-57794a68645852764c327870596c7863656d78705969497349434a745957746c496977674d4377674d6a55794e31303d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-case "$NGX_CC_NAME" in
-
-    msvc*)
-        ngx_makefile=makefile.msvc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\" LIBC=$LIBC"
-        ngx_zlib="ZLIB=\"$ZLIB\""
-
-    ;;
-
-    owc*)
-        ngx_makefile=makefile.owc
-        ngx_opt="CPU_OPT=\"$CPU_OPT\""
-        ngx_zlib=`echo ZLIB=\"$ZLIB\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    bcc)
-        ngx_makefile=makefile.bcc
-        ngx_opt="-DCPU_OPT=\"$CPU_OPT\""
-        ngx_zlib=`echo \-DZLIB=\"$ZLIB\" | sed -e "s/\//$ngx_regex_dirsep/g"`
-    ;;
-
-    *)
-        ngx_makefile=
-    ;;
-
-esac
-
-
-done=NO
-
-
-case "$NGX_PLATFORM" in
-
-    win32)
-
-        if [ -n "$ngx_makefile" ]; then
-            cat << END                                        >> $NGX_MAKEFILE
-
-`echo "$ZLIB/zlib.lib:	$NGX_MAKEFILE" | sed -e "s/\//$ngx_regex_dirsep/g"`
-	\$(MAKE) -f auto/lib/zlib/$ngx_makefile $ngx_opt $ngx_zlib
-
-END
-
-        else
-
-            cat << END                                        >> $NGX_MAKEFILE
-
-$ZLIB/libz.a:	$NGX_MAKEFILE
-	cd $ZLIB \\
-	&& \$(MAKE) distclean \\
-	&& \$(MAKE) -f win32/Makefile.gcc \\
-		CFLAGS="$ZLIB_OPT" CC="\$(CC)" \\
-		libz.a
-
-END
-
-        fi
-
-        done=YES
-    ;;
-
-    # FreeBSD: i386
-    # Linux: i686
-
-    *:i386 | *:i686)
-        case $ZLIB_ASM in
-            pentium)
-
-                cat << END                                    >> $NGX_MAKEFILE
-
-$ZLIB/libz.a:	$NGX_MAKEFILE
-	cd $ZLIB \\
-	&& \$(MAKE) distclean \\
-	&& cp contrib/asm586/match.S . \\
-	&& CFLAGS="$ZLIB_OPT -DASMV" CC="\$(CC)" \\
-		./configure \\
-	&& \$(MAKE) OBJA=match.o libz.a
-
-END
-
-                done=YES
-            ;;
-
-            pentiumpro)
-
-                cat << END                                    >> $NGX_MAKEFILE
-
-$ZLIB/libz.a:	$NGX_MAKEFILE
-	cd $ZLIB \\
-	&& \$(MAKE) distclean \\
-	&& cp contrib/asm686/match.S . \\
-	&& CFLAGS="$ZLIB_OPT -DASMV" CC="\$(CC)" \\
-		./configure \\
-	&& \$(MAKE) OBJA=match.o libz.a
-
-END
-
-                done=YES
-            ;;
-
-            NO)
-            ;;
-
-            *)
-                echo "$0: error: invalid --with-zlib-asm=$ZLIB_ASM option."
-                echo "The valid values are \"pentium\" and \"pentiumpro\" only".
-                echo
-
-                exit 1;
-            ;;
-        esac
-    ;;
-
-esac
-
-
-if [ $done = NO ]; then
-
-    cat << END                                                >> $NGX_MAKEFILE
-
-$ZLIB/libz.a:	$NGX_MAKEFILE
-	cd $ZLIB \\
-	&& \$(MAKE) distclean \\
-	&& CFLAGS="$ZLIB_OPT" CC="\$(CC)" \\
-		./configure \\
-	&& \$(MAKE) libz.a
-
-END
-
-fi
-57794a68645852764c327870596c7863656d78705969497349434a745957746c5a6d6c735a53356959324d694c4341774c43417a4f444a640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -q -O2 -tWM -w-8004 -w-8012 $(CPU_OPT)
-
-zlib.lib:
-	cd $(ZLIB)
-
-	bcc32 -c $(CFLAGS) adler32.c crc32.c deflate.c \
-		trees.c zutil.c compress.c \
-		inflate.c inffast.c inftrees.c
-
-	tlib zlib.lib +adler32.obj +crc32.obj +deflate.obj \
-		+trees.obj +zutil.obj +compress.obj \
-		+inflate.obj +inffast.obj +inftrees.obj
-57794a68645852764c327870596c7863656d78705969497349434a745957746c5a6d6c735a53357463335a6a496977674d4377674d7a673158513d3d0a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -nologo -O2 -Ob1 -Oi -Gs $(LIBC) $(CPU_OPT)
-
-zlib.lib:
-	cd $(ZLIB)
-
-	cl -c $(CFLAGS) adler32.c crc32.c deflate.c \
-		trees.c zutil.c compress.c \
-		inflate.c inffast.c inftrees.c
-
-	link -lib -out:zlib.lib adler32.obj crc32.obj deflate.obj \
-		trees.obj zutil.obj compress.obj \
-		inflate.obj inffast.obj inftrees.obj
-57794a68645852764c327870596c7863656d78705969497349434a745957746c5a6d6c735a53357664324d694c4341774c43417a4e7a52640a
-
-# Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
-
-
-CFLAGS = -zq -bt=nt -ot -op -oi -oe -s -bm $(CPU_OPT)
-
-zlib.lib:
-	cd $(ZLIB)
-
-	wcl386 -c $(CFLAGS) adler32.c crc32.c deflate.c trees.c zutil.c &
-		compress.c inflate.c inffast.c inftrees.c
-	wlib -n zlib.lib adler32.obj crc32.obj deflate.obj trees.obj &
-		zutil.obj compress.obj inflate.obj inffast.obj inftrees.obj
-57794a68645852764c32397a49697767496d4e76626d59694c4341774c4341794d54557a58513d3d0a
+57794a305a584e304c324631644739635847397a49697767496d4e76626d59694c4341774c4341794d6a597758513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -6943,7 +4921,7 @@ if test -z "$NGX_CPU_CACHE_LINE"; then
 fi
 
 have=NGX_CPU_CACHE_LINE value=$NGX_CPU_CACHE_LINE . auto/define
-57794a68645852764c32397a49697767496d5268636e64706269497349444173494449354d7a52640a
+57794a305a584e304c324631644739635847397a49697767496d5268636e6470626949734944417349444d774e446c640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7059,7 +5037,7 @@ ngx_feature_libs=
 ngx_feature_test="int32_t  lock, n;
                   n = OSAtomicCompareAndSwap32Barrier(0, 1, &lock)"
 . auto/feature
-57794a68645852764c32397a49697767496d5a795a575669633251694c4341774c4341794e7a493558513d3d0a
+57794a305a584e304c324631644739635847397a49697767496d5a795a575669633251694c4341774c4341794f44553258513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7187,7 +5165,7 @@ if [ $version -ge 701000 ]; then
     echo " + cpuset_setaffinity() found"
     have=NGX_HAVE_CPUSET_SETAFFINITY . auto/have
 fi
-57794a68645852764c32397a49697767496d7870626e5634496977674d4377674e4467304d46303d0a
+57794a305a584e304c324631644739635847397a49697767496d7870626e5634496977674d4377674e5441794e56303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7373,7 +5351,7 @@ ngx_include="sys/vfs.h";     . auto/include
 
 
 CC_AUX_FLAGS="$cc_aux_flags -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64"
-57794a68645852764c32397a49697767496e4e766247467961584d694c4341774c4341784e44417858513d3d0a
+57794a305a584e304c324631644739635847397a49697767496e4e766247467961584d694c4341774c4341784e44597958513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7435,7 +5413,7 @@ if [ $ngx_found = yes ]; then
     CORE_SRCS="$CORE_SRCS $EVENTPORT_SRCS"
     EVENT_MODULES="$EVENT_MODULES $EVENTPORT_MODULE"
 fi
-57794a68645852764c32397a49697767496e6470626a4d79496977674d4377674e7a557758513d3d0a
+57794a305a584e304c324631644739635847397a49697767496e6470626a4d79496977674d4377674e7a6b7758513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7476,7 +5454,7 @@ fi
 
 have=NGX_HAVE_AIO . auto/have
 have=NGX_HAVE_IOCP . auto/have
-57794a68645852764c3352356347567a49697767496e4e70656d56765a694973494441734944457a4f4468640a
+57794a305a584e304c32463164473963584852356347567a49697767496e4e70656d56765a69497349444173494445304e6a4a640a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7551,7 +5529,7 @@ case $ngx_size in
         exit 1
 esac
 
-57794a68645852764c3352356347567a49697767496e52356347566b5a5759694c4341774c4341784e54497958513d3d0a
+57794a305a584e304c32463164473963584852356347567a49697767496e52356347566b5a5759694c4341774c4341784e546b3558513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7629,7 +5607,7 @@ fi
 if [ $ngx_found != yes ]; then
     echo "typedef $ngx_found  $ngx_type;"   >> $NGX_AUTO_CONFIG_H
 fi
-57794a68645852764c3352356347567a49697767496e5670626e527764484a666443497349444173494467334e31303d0a
+57794a305a584e304c32463164473963584852356347567a49697767496e5670626e527764484a66644349734944417349446b794d6c303d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
@@ -7675,7 +5653,7 @@ if [ $found = no ]; then
     echo "typedef $found  uintptr_t;"                   >> $NGX_AUTO_CONFIG_H
     echo "typedef $found  intptr_t;" | sed -e 's/u//g'  >> $NGX_AUTO_CONFIG_H
 fi
-57794a68645852764c3352356347567a49697767496e5a686248566c496977674d4377674d54553158513d3d0a
+57794a305a584e304c32463164473963584852356347567a49697767496e5a686248566c496977674d4377674d54593358513d3d0a
 
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.

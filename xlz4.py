@@ -85,7 +85,8 @@ class Lz4Container(object):
             raise IOError("No such file or directory: '%s'" % dir_name)
 
         # file_name is the outfile, namely *.lz4r
-        base_dir_name = os.path.basename(dir_name.rstrip('/'))
+        sep = os.path.sep
+        base_dir_name = os.path.basename(dir_name.rstrip(sep))
         file_name = self.kwargs.get('file_name', base_dir_name)
         if not file_name.endswith('.lz4r'):
             file_name = file_name + '.lz4r'
@@ -96,7 +97,7 @@ class Lz4Container(object):
             else None
 
         # get dir_name index in case of long dir_name
-        base_dir_name_index = len(dir_name.rstrip('/').split('/')) - 1
+        base_dir_name_index = len(dir_name.rstrip(sep).split(sep)) - 1
         # remove old file if exist
         if os.path.isfile(full_file_name):
             os.remove(full_file_name)
@@ -106,7 +107,7 @@ class Lz4Container(object):
             # get all files in dir_name and compress them using lz4
             for parent, dirnames, infile_names in os.walk(dir_name):
                 #
-                header_dir = '/'.join(parent.split('/')[base_dir_name_index:])
+                header_dir = sep.join(parent.split(sep)[base_dir_name_index:])
                 for infile_name in infile_names:
                     if WINPLAT:
                         infile_name = infile_name.decode('gbk')
@@ -195,6 +196,7 @@ class Lz4Container(object):
         # decompress
         infile = open(file_name, 'rb')
         outfile_name = None
+        sep = os.path.sep
         while True:
             header = infile.readline()  # file header
             if not header:
@@ -221,16 +223,15 @@ class Lz4Container(object):
                 if replcae_dir_name and file_dir:
                     drive, sub_dir = os.path.splitdrive(file_dir)
                     if sub_dir:
-                        split_sub_dir = sub_dir.split('/')
+                        split_sub_dir = sub_dir.split(sep)
                         if split_sub_dir and len(split_sub_dir) > 0:
                             split_sub_dir[0] = replcae_dir_name
                         elif split_sub_dir and len(split_sub_dir) > 1:
                             split_sub_dir[1] = replcae_dir_name
-                        sub_dir = '/'.join(split_sub_dir)
+                        sub_dir = sep.join(split_sub_dir)
                         file_dir = os.path.join(drive, sub_dir)
                 # create dir
                 try:
-                    print(file_dir)
                     if not os.path.isdir(file_dir):
                         os.makedirs(file_dir)
                 except WindowsError as e:
@@ -243,7 +244,6 @@ class Lz4Container(object):
                 if not outfile_name:
                     raise AssertionError('block missing')
             # save file
-            print(outfile_name)
             with open(outfile_name, open_mode) as outfile:
                 # header[-1]: size of content
                 content = infile.read(header[-1])
