@@ -19,11 +19,12 @@ function:
 structure of each block in *.lz4r:
 
 	|-- header<list using hex and base64>
-		|-- dir<str>
-		|-- filename<str>
+		|-- dir<str or None>
+		|-- filename<str or None>
 		|-- block count of filename<int>
 		|-- size of content<int>
 	|-- compressed content <str using lz4.compress>
+
 
 
 

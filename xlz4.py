@@ -150,8 +150,9 @@ class Lz4Container(object):
                     blk = lz4.compress(blk)
 
                 # header for blk info
-                header = ['./',  # dir
-                          os.path.basename(dir_name),
+                header = [('./' if blk_count == 0 else None),
+                          (os.path.basename(dir_name) if blk_count == 0 else
+                           None),
                           blk_count,  # is new file or not
                           len(blk)]  # bytes
                 blk_count += 1
@@ -206,6 +207,7 @@ class Lz4Container(object):
                 raise TypeError("'%s' is not lz4r_type file" % file_name)
 
             blk_count = header[2]  # header[2] saves the block_count of file
+
             # print list of filename if l
             if self.ctype == 'l':
                 if (blk_count == 0):
@@ -213,35 +215,36 @@ class Lz4Container(object):
                 infile.seek(header[-1], 1)
                 continue
 
-            content = infile.read(header[-1])  # header[-1]: size of content
             file_dir = header[0]  # header[0]: dir of origin file
-
             if (blk_count == 0):  # means new file
                 # change decompress dir to replcae_dir_name
                 if replcae_dir_name and file_dir:
                     drive, sub_dir = os.path.splitdrive(file_dir)
                     if sub_dir:
-                        try:  # in case of any error
-                            split_sub_dir = sub_dir.split('/')
-                            if split_sub_dir and len(split_sub_dir) > 0:
-                                split_sub_dir[0] = replcae_dir_name
-                            elif split_sub_dir and len(split_sub_dir) > 1:
-                                split_sub_dir[1] = replcae_dir_name
-                            sub_dir = '/'.join(split_sub_dir)
-                            file_dir = os.path.join(drive, sub_dir)
-                        except:
-                            raise
+                        split_sub_dir = sub_dir.split('/')
+                        if split_sub_dir and len(split_sub_dir) > 0:
+                            split_sub_dir[0] = replcae_dir_name
+                        elif split_sub_dir and len(split_sub_dir) > 1:
+                            split_sub_dir[1] = replcae_dir_name
+                        sub_dir = '/'.join(split_sub_dir)
+                        file_dir = os.path.join(drive, sub_dir)
                 # create dir
-                os.makedirs(file_dir) if not os.path.isdir(file_dir) else None
+                try:
+                    os.makedirs(file_dir) if not os.path.isdir(file_dir) else\
+                        None
+                except WindowsError as e:
+                    raise WindowsError("Fail to makedirs: %s" % file_dir)
                 outfile_name = os.path.join(file_dir, header[1])
                 open_mode = 'wb'
-            else:  #
+            else:  # other block of file
                 open_mode = 'ab'
                 # outfile_name should not be None
                 if not outfile_name:
                     raise AssertionError('block missing')
             # save file
             with open(outfile_name, open_mode) as outfile:
+                # header[-1]: size of content
+                content = infile.read(header[-1])
                 if WINPLAT:
                     outfile.write(content)
                 else:
