@@ -1,8 +1,0 @@
-235341F63-0a.jpg
-analyze_webstats.py
-gen_webstats.py
-performance_test.py
-235341F63-0a.jpg
-dim_fashion_matchsets.txt
-example_result.txt
-test_items.txt

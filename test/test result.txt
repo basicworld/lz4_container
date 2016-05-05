@@ -1,6 +1,0 @@
-there are 3 items in both dir of linux and win,
-1, unpackedir --decompressd dir from tmp.lz4r
-2, origindir --origin dir for compress
-3, test.lz4r --compressed filr. you can get dir of tmp if you decompress tmp.lz4r
-
-note that lz4 is not available on win, the dir of win is just a demo
