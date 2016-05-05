@@ -6,8 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
-*tmp*
-*.lz4r
+
 # Distribution / packaging
 .Python
 env/

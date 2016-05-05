@@ -1,10 +1,17 @@
 # lz4_container
 
-python container for lz4 (lz4 homepage: https://github.com/mwotton/lz4hs)
+python container for lz4
+
+	# eg for compress. 
+	python xlz4.py -c tmp.lz4r tmp
+
+	# eg for decompress.
+	python xlz4.py -x tmp.lz4r
+
 
 ### lz4
 
-lz4 is a fast fast compression
+lz4 is a fast fast compression， homepage http://cyan4973.github.io/lz4/
 
 here I write xlz4.py to create container for lz4
 
@@ -18,7 +25,7 @@ here I write xlz4.py to create container for lz4
 	
 	Usage:
 	    xlz4.py -c <dir_name.lz4r> <dir_name>
-	    xlz4.py -x <dir_name.lz4r>
+	    xlz4.py -x <dir_name.lz4r> [<dir_name>]
 	
 	Arguments:
 	    dir_name.lz4r compressed file_name
@@ -57,4 +64,10 @@ use hex to save header
 
 split file in case of memoryerror
 
+now you can change dir when decompress:
 
+	xlz4.py -x <dir_name.lz4r> <dir_name>
+
+now you can list filenames in *.lz4r:
+
+	xlz4.py -l <dir_name.lz4r>
