@@ -117,3 +117,9 @@ now you can list filenames in *.lz4r:
 debug for Path Dependence
 
 multi types of file tested: dir, txt_like file, jpg, pdf, gif, mp3...
+
+improve the robustness：
+
+- test if it's *.lz4r file or not by block_header
+
+simplify header of block: remove unnecessary info
