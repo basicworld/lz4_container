@@ -8,12 +8,12 @@ lz4 is a fast compression， homepage http://cyan4973.github.io/lz4/
 here I write xlz4.py to create container for lz4
 
 
-function: 
+function:
 
 - compress dir to *.lz4r
 - compress file to *.lz4r
 - show filenames in *.lz4r
-- decompress *.lz4r 
+- decompress *.lz4r
 
 
 structure of each block in *.lz4r:
@@ -31,7 +31,7 @@ structure of each block in *.lz4r:
 
 ### Dependence
 
-- linux (can't run on win, but you can print filenames on win using `-l`)
+- linux (`lz4` can't run on win)
 - python2.7x (not test on python3.x)
 - python library: `lz4`, `docopt`
 
@@ -48,11 +48,11 @@ cmd:
 	    xlz4.py -c <dir_name.lz4r> <dir_name>
 	    xlz4.py -x <dir_name.lz4r> [<dir_name>]
 	    xlz4.py -l <dir_name.lz4r>
-	
+
 	Arguments:
 	    dir_name.lz4r file_name
 	    dir_name      dir_name
-	
+
 	Options:
 	    -h --help     show this help
 	    -c            compress
@@ -62,7 +62,7 @@ cmd:
 cmd eg:
 
 
-	# eg for compress. 
+	# eg for compress.
 	# available on linux
 	python xlz4.py -c test.lz4r test/
 
@@ -124,3 +124,4 @@ improve the robustness：
 - test if it's *.lz4r file or not by block_header
 
 simplify header of block: remove unnecessary info
+

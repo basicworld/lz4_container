@@ -47,8 +47,7 @@ class Lz4Container(object):
 
         whis Container will work just like linux's `tar` cmd when use on win,
         because `lz4` can't install on win, which means, *.lz4r create on win
-        can't decompress on linux, vice versa. however, you can print filenames
-        in *.lz4r on whatever platform, using `-l`
+        can't decompress on linux, vice versa.
         """
         # raise error if open in wrong mode
         if ctype not in ('c', 'x', 'l'):
