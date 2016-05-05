@@ -1,1 +1,0 @@
-python -c 'from xlz4 import api; import sys; args=sys.argv[1:]; ctype=args[0].replace("-","");file_name=args[1] if len(args)>1 else None;dir_name=args[2] if len(args)>2 else None;print(dir_name,file_name,ctype)'
