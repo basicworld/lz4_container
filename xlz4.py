@@ -27,11 +27,13 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 import base64
 WINPLAT = ('win' in sys.platform)
+SEP = '/'
 if not WINPLAT:
     import lz4
 
 a2b_hex = base64.binascii.a2b_hex
 hexlify = base64.binascii.hexlify
+unify_dir = lambda x: x.replace('\\', '/')
 
 
 class Lz4Container(object):
@@ -84,8 +86,8 @@ class Lz4Container(object):
             raise IOError("No such file or directory: '%s'" % dir_name)
 
         # file_name is the outfile, namely *.lz4r
-        sep = os.path.sep
-        base_dir_name = os.path.basename(dir_name.rstrip(sep))
+        dir_name = unify_dir(dir_name)
+        base_dir_name = os.path.basename(dir_name.rstrip(SEP))
         file_name = self.kwargs.get('file_name', base_dir_name)
         if not file_name.endswith('.lz4r'):
             file_name = file_name + '.lz4r'
@@ -95,18 +97,19 @@ class Lz4Container(object):
         os.makedirs(full_file_dir) if not os.path.isdir(full_file_dir) \
             else None
 
-        # get dir_name index in case of long dir_name
-        base_dir_name_index = len(dir_name.rstrip(sep).split(sep)) - 1
         # remove old file if exist
         if os.path.isfile(full_file_name):
             os.remove(full_file_name)
+        # get dir_name index in case of long dir_name
+        base_dir_name_index = len(dir_name.rstrip(SEP).split(SEP)) - 1
         # open file to save
         outfile = open(full_file_name, 'wb')
         if self.type_of_dir_name == 'dir':
             # get all files in dir_name and compress them using lz4
             for parent, dirnames, infile_names in os.walk(dir_name):
                 #
-                header_dir = sep.join(parent.split(sep)[base_dir_name_index:])
+                parent = unify_dir(parent)
+                header_dir = SEP.join(parent.split(SEP)[base_dir_name_index:])
                 for infile_name in infile_names:
                     if WINPLAT:
                         infile_name = infile_name.decode('gbk')
@@ -125,8 +128,7 @@ class Lz4Container(object):
                         # header for blk:
                         # [dir, filename, blk_count, content size]
                         header = [(header_dir if blk_count == 0 else None),
-                                  (os.path.basename(infile_name) if
-                                   blk_count == 0 else None),
+                                  (infile_name if blk_count == 0 else None),
                                   blk_count,  # is new file or not
                                   len(blk)]  # bytes
                         blk_count += 1
@@ -195,7 +197,6 @@ class Lz4Container(object):
         # decompress
         infile = open(file_name, 'rb')
         outfile_name = None
-        sep = os.path.sep
         while True:
             header = infile.readline()  # file header
             if not header:
@@ -222,13 +223,12 @@ class Lz4Container(object):
                 if replcae_dir_name and file_dir:
                     drive, sub_dir = os.path.splitdrive(file_dir)
                     if sub_dir:
-                        split_sub_dir = sub_dir.split(sep)
+                        split_sub_dir = unify_dir(sub_dir).split(SEP)
                         if split_sub_dir and len(split_sub_dir) > 0:
-                            split_sub_dir[0] = replcae_dir_name
+                            split_sub_dir[0] = unify_dir(replcae_dir_name)
                         elif split_sub_dir and len(split_sub_dir) > 1:
-                            split_sub_dir[1] = replcae_dir_name
-                        sub_dir = sep.join(split_sub_dir)
-                        file_dir = os.path.join(drive, sub_dir)
+                            split_sub_dir[1] = unify_dir(replcae_dir_name)
+                        file_dir = os.path.join(drive, SEP.join(split_sub_dir))
                 # create dir
                 try:
                     if not os.path.isdir(file_dir):
