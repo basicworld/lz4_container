@@ -257,7 +257,7 @@ class Lz4Container(object):
         self.ok = True
 
 
-def api(dir_name, file_name, ctype):
+def test(dir_name, file_name, ctype):
     """
     api(dir_name, file_name, ctype)
 
